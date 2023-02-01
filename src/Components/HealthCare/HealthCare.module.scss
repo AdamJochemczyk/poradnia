@@ -1,0 +1,91 @@
+@import "../../Utilities/variables.scss";
+@import "../../Utilities/utilities.scss";
+
+.container {
+    position: relative;
+    padding: 20px;
+    width: 100vw;
+    min-height: 900px;
+    overflow: hidden;
+    font-size: calc(12px + 0.25vw);
+
+    @include flexB;
+    flex-direction: column;
+
+
+
+    &::before {
+        width: 100%;
+        height: 80%;
+        position: absolute;
+        top: 15%;
+        left: 0;
+        content: '';
+        background-image: url("../../assets/Photos/2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right;
+        opacity: 0.5;
+    }
+
+    .logo {
+        display: none;
+    }
+
+}
+
+.description {
+    font-family: 'FuturaPTBold';
+    color: $pink;
+    font-size: clamp(12px, 1.9em, 36px);
+    line-height: calc(20px + 3vw);
+    width: 100%;
+    margin: 40px auto;
+    z-index: 5;
+}
+
+.care__options {
+    width: 100vw;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: linear-gradient(to top, rgb(255, 255, 255) 50%, transparent);
+    min-height: 100px;
+
+    .options__image {
+        width: clamp(350px, 70%, 400px);
+        margin: 10px auto;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .container {
+        align-items: start;
+        &::before {
+            background-image: url("../../assets/Photos/startowa.jpg");
+        }
+
+        .logo {
+            display: block;
+            width: 50%;
+            z-index: 5;
+        }
+    }
+
+    .description {
+        width: clamp(200px, 40%, 500px);
+        margin: 20px;
+        line-height: 30px;
+        text-align: left;
+
+    }
+
+    .care__options {
+        justify-content: flex-start;
+        .options__image {
+            margin: 20px 0px 0px 60px;
+        }
+    }
+}

@@ -1,0 +1,143 @@
+@import "../../Utilities/variables.scss";
+@import "../../Utilities/utilities.scss";
+
+.menu {
+    font-size: calc(15px + 1vw);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    overflow: hidden;
+    z-index: 10;
+
+    &__topGradient {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 70px;
+        position: absolute;
+        background-image : linear-gradient(180deg, #FF9B4D 0%, rgba(255, 155, 77, 0) 100%);
+    }
+    &__bottomGradient {
+        position: absolute;
+        left: 0;
+        top: 100px;
+        width: 100vw;
+        height: 150px;
+        position: absolute;
+        background-image : linear-gradient(180deg, #FF9B4D 0%, rgba(255, 155, 77, 0) 100%);
+        transform: rotate(-180deg);
+        z-index: 5;
+    }
+
+
+    &__option {
+        font-family: 'FuturaPTHeavy', sans-serif;
+        z-index: 15;
+        color: $darkGreen;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 20;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        border: none;
+    }
+
+    .close__barP,
+    .close__barL {
+        width: 30px;
+        height: 3px;
+        border-radius: 20px;
+        background-color: $darkGreen;
+        transform-origin: 35%;
+    }
+
+    .close__barP {
+        transform-origin: center;
+        transform: rotate(43deg);
+    }
+    .close__barL {
+        transform: rotate(-43deg);
+    }
+}
+
+.navbar {
+    padding: 20px;
+    min-width: 100vw;
+    min-height: 100px;
+    background: linear-gradient(180deg, #FF9B4D 23.44%, #FFFFFF 100%);
+    @include flexB;
+
+    &__logo {
+        width: clamp(190px, 40%, 416px);
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__handle {
+        width: 30px;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+
+        .handle__element {
+            width: 100%;
+            height: 5px;
+            background-color: $darkGreen;
+            border-radius: 20px;
+        }
+    }
+
+    .links__wide {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .navbar {
+        justify-content: flex-end;
+        gap: 30px;
+
+        &__logo {
+            display: none;
+        }
+
+        &__handle {
+            display: none;
+        }
+
+        .links__wide {
+            width: 50%;
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
+

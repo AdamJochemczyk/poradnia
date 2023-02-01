@@ -1,0 +1,67 @@
+@import "../../Utilities/utilities.scss";
+
+.fundamentals {
+    font-size: calc(12px + 0.25vw);
+    width: 100vw;
+    padding: 20px;
+
+    &__header {
+        @include header;
+        margin: 0;
+    }
+
+    .content {
+        padding: 20px;
+        width: min(100%, 1100px);
+        margin: 0px auto;
+
+        &__element {
+            background: linear-gradient(180deg, rgba(243, 155, 155, 0.54) 0%, rgba(255, 255, 255, 0.52) 100%);
+            border: 2px solid #F39B9B;
+            border-radius: 7px;
+            padding: 20px;
+            @include flexB;
+            margin: 20px 0px;
+            min-height: 120px;
+
+            .image {
+                width: clamp(20px, 15%, 35px);
+            }
+
+            .text {
+                text-align: center;
+                width: 85%;
+                font-family: 'FuturaPTMedium';
+                font-size: .85em;
+                color: $darkGreen;
+
+                .bold {
+                    @include spanBold;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .content {
+        @include center;
+        gap: 15px;
+        flex-wrap: wrap;
+
+        //      DLACZEGO NIE DZIAŁAJĄ MI MEDIA ?
+        &__element {
+            width: min(328px, 40%);
+            aspect-ratio: 1/1;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            height: 200px;
+
+            .image {
+                width: 40px;
+                aspect-ratio: 1;
+            }
+        }
+    }
+}

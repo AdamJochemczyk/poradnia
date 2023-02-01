@@ -1,0 +1,37 @@
+@import "../Utilities/variables.scss";
+
+@mixin spanBold {
+    font-family: 'FuturaPTExtraBold';
+}
+
+@mixin header {
+    font-size: clamp(12px, 1.9em, 36px);
+    font-family: 'FuturaPTBold';
+    color: $pink;
+    margin-bottom: 40px;
+}
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin centerColumn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin flexB {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexE {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
