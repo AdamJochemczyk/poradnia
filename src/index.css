@@ -1,15 +1,33 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "FuturaPTBold";
+  src: url("./assets/Fonts/FuturaPTBold.otf");
+}
+@font-face {
+  font-family: "Futura PT";
+  src: url("./assets/Fonts/FuturaPTBook.otf");
+}
+@font-face {
+  font-family: "Futura PT";
+  src: url("./assets/Fonts/FuturaPTDemi.otf");
+}
+@font-face {
+  font-family: "FuturaPTExtraBold";
+  src: url("./assets/Fonts/FuturaPTExtraBold.otf");
+}
+@font-face {
+  font-family: "FuturaPTHeavy";
+  src: url("./assets/Fonts/FuturaPTHeavy.otf");
+}
+@font-face {
+  font-family: "FuturaPTMedium";
+  src: url("./assets/Fonts/FuturaPTMedium.otf");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: "Futura PT";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {

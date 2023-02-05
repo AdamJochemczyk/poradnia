@@ -25,7 +25,7 @@ export const MenuToggled = ({closeAction}:{closeAction:()=>void}) => {
 
 }
 
-const Navigation = () => {
+export const Navigation = () => {
 
     const [isOpen, setIsOpen] = useState(false)
     const handleClick = () => setIsOpen(!isOpen)
@@ -52,5 +52,3 @@ const Navigation = () => {
         </>
     )
 }
-
-export default Navigation
