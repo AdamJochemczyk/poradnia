@@ -1,0 +1,82 @@
+@import "../../../Utilities/variables.scss";
+
+.preparation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box {
+  background: linear-gradient(
+    180deg,
+    rgba(243, 155, 155, 0.54) 30.79%,
+    rgba(255, 255, 255, 0.52) 130.79%
+  );
+  border: 2px solid #f39b9b;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  padding: 9px 10px 13px 15px;
+  color: $darkGreen;
+  margin: 15px 0;
+}
+.title {
+  font-family: "FuturaPTBold";
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+.twoListLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  ul {
+    margin-left: 11px;
+    font-size: 9px;
+    li {
+      margin-top: 10px;
+    }
+  }
+}
+.oneListLayout{
+    ul {
+    margin-left: 11px;
+    font-size: 9px;
+    li {
+      margin-top: 10px;
+    }
+  }
+}
+.displayDetailsBoxButton {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Futura PT";
+  color: $darkGreen;
+  text-transform: uppercase;
+  font-size: 9px;
+  gap: 3px;
+
+  > * {
+    cursor: pointer;
+  }
+}
+.rotate{
+    rotate: 180deg;
+}
+.close{
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.discountLink{
+    text-transform: uppercase;
+    color: $darkGreen;
+    font-family: "FuturaPTBold";
+}
+.bolder{
+    font-family: "FuturaPTBold";
+}
+.help{
+    margin-top: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "FuturaPTExtraBold";
+    font-size: 12px;
+}

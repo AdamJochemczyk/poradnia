@@ -1,0 +1,21 @@
+@import "../../Utilities/variables.scss";
+
+.header {
+  font-family: "FuturaPTBold";
+  font-weight: 700;
+  font-size: 20px;
+  color: $darkGreen;
+  text-transform: uppercase;
+  margin-left: 20px;
+  line-height: 26px;
+  max-width: 280px;
+  margin-top: 20px;
+}
+@media screen and (min-width: 900px) {
+  .header {
+    font-size: 48px;
+    line-height: 62px;
+    max-width: 600px;
+    margin-top: 56px;
+  }
+}
