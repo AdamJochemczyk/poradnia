@@ -1,6 +1,6 @@
 @import "../../Utilities/variables.scss";
 
-.container{
+.container {
   display: grid;
   grid-template-columns: 35px 1fr;
   margin: 17px 0;
@@ -22,31 +22,31 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
   color: $darkGreen;
-  font-family: 'FuturaPTExtraBold';
+  font-family: "FuturaPTExtraBold";
 }
 
-.info{
+.info {
   margin-top: 5px;
   margin-left: 25px;
 }
 
-.primaryText{
+.primaryText {
   color: $darkGreen;
-  font-family: 'FuturaPTExtraBold';
+  font-family: "FuturaPTExtraBold";
   font-size: 12px;
   text-transform: uppercase;
   line-height: 15px;
   font-weight: 800;
 }
 
-.secondaryText{
+.secondaryText {
   color: $darkGreen;
-  font-family: 'Futura PT';
+  font-family: "Futura PT";
   font-size: 9px;
   line-height: 12px;
   font-weight: 800;
   margin-top: 8px;
-  a{
+  a {
     cursor: pointer;
     text-decoration: underline;
     font-family: "FuturaPTExtraBold";
@@ -55,6 +55,18 @@
 }
 
 @media screen and (min-width: 900px) {
+  .container {
+    display: grid;
+    grid-template-columns: 107px 1fr;
+    margin: 0 0 63px 0;
+    max-width: 762px;
+    padding-left: 40px;
+  }
+
+  .restPoints{
+    max-width: none;
+  }
+
   .pointBox {
     width: 107px;
     height: 107px;
@@ -67,4 +79,18 @@
     border-radius: 20px;
     font-size: 40px;
   }
+
+  .info {
+  margin-top: 30px;
+  margin-left: 37px;
+}
+.primaryText {
+  font-size: 24px;
+  line-height: 31px;
+}
+.secondaryText {
+  font-size: 20px;
+  line-height: 26px;
+  margin-top: 12px;
+}
 }
