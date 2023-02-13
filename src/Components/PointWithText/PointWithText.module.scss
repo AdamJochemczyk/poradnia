@@ -1,96 +1,96 @@
 @import "../../Utilities/variables.scss";
 
 .container {
-  display: grid;
-  grid-template-columns: 35px 1fr;
-  margin: 17px 0;
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    margin: 17px 0;
 }
 
 .pointBox {
-  background: linear-gradient(
-    180deg,
-    rgba(243, 155, 155, 0.54) 0%,
-    rgba(255, 255, 255, 0.52) 100%
-  );
-  border: 2px solid #f39b9b;
-  width: 35px;
-  height: 35px;
-  font-size: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 6px;
-  color: $darkGreen;
-  font-family: "FuturaPTExtraBold";
+    background: linear-gradient(
+        180deg,
+        rgba(243, 155, 155, 0.54) 0%,
+        rgba(255, 255, 255, 0.52) 100%
+    );
+    border: 2px solid #f39b9b;
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    color: $darkGreen;
+    font-family: "FuturaPTExtraBold";
 }
 
 .info {
-  margin-top: 5px;
-  margin-left: 25px;
+    margin-top: 5px;
+    margin-left: 25px;
 }
 
 .primaryText {
-  color: $darkGreen;
-  font-family: "FuturaPTExtraBold";
-  font-size: 12px;
-  text-transform: uppercase;
-  line-height: 15px;
-  font-weight: 800;
+    color: $darkGreen;
+    font-family: "FuturaPTExtraBold";
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 15px;
+    font-weight: 800;
 }
 
 .secondaryText {
-  color: $darkGreen;
-  font-family: "Futura PT";
-  font-size: 9px;
-  line-height: 12px;
-  font-weight: 800;
-  margin-top: 8px;
-  a {
-    cursor: pointer;
-    text-decoration: underline;
-    font-family: "FuturaPTExtraBold";
     color: $darkGreen;
-  }
+    font-family: "Futura PT";
+    font-size: 9px;
+    line-height: 12px;
+    font-weight: 800;
+    margin-top: 8px;
+    a {
+        cursor: pointer;
+        text-decoration: underline;
+        font-family: "FuturaPTExtraBold";
+        color: $darkGreen;
+    }
 }
 
 @media screen and (min-width: 900px) {
-  .container {
-    display: grid;
-    grid-template-columns: 107px 1fr;
-    margin: 0 0 63px 0;
-    max-width: 762px;
-    padding-left: 40px;
-  }
+    .container {
+        display: grid;
+        grid-template-columns: 107px 1fr;
+        margin: 0 0 63px 0;
+        max-width: 762px;
+        padding-left: 40px;
+    }
 
-  .restPoints{
-    max-width: none;
-  }
+    .restPoints {
+        max-width: none;
+    }
 
-  .pointBox {
-    width: 107px;
-    height: 107px;
-    background: linear-gradient(
-      180deg,
-      rgba(243, 155, 155, 0.54) 30.79%,
-      rgba(255, 255, 255, 0.52) 130.79%
-    );
-    border: 8px solid #f39b9b;
-    border-radius: 20px;
-    font-size: 40px;
-  }
+    .pointBox {
+        width: 107px;
+        height: 107px;
+        background: linear-gradient(
+            180deg,
+            rgba(243, 155, 155, 0.54) 30.79%,
+            rgba(255, 255, 255, 0.52) 130.79%
+        );
+        border: 8px solid #f39b9b;
+        border-radius: 20px;
+        font-size: 40px;
+    }
 
-  .info {
-  margin-top: 30px;
-  margin-left: 37px;
-}
-.primaryText {
-  font-size: 24px;
-  line-height: 31px;
-}
-.secondaryText {
-  font-size: 20px;
-  line-height: 26px;
-  margin-top: 12px;
-}
+    .info {
+        margin-top: 30px;
+        margin-left: 37px;
+    }
+    .primaryText {
+        font-size: 24px;
+        line-height: 31px;
+    }
+    .secondaryText {
+        font-size: 20px;
+        line-height: 26px;
+        margin-top: 12px;
+    }
 }

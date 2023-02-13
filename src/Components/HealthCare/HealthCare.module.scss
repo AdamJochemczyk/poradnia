@@ -12,15 +12,13 @@
     @include flexB;
     flex-direction: column;
 
-
-
     &::before {
         width: 100%;
         height: 80%;
         position: absolute;
         top: 15%;
         left: 0;
-        content: '';
+        content: "";
         background-image: url("../../assets/Photos/2.jpg");
         background-size: cover;
         background-repeat: no-repeat;
@@ -31,11 +29,10 @@
     .logo {
         display: none;
     }
-
 }
 
 .description {
-    font-family: 'FuturaPTBold';
+    font-family: "FuturaPTBold";
     color: $pink;
     font-size: clamp(12px, 1.9em, 36px);
     line-height: calc(20px + 3vw);
@@ -79,7 +76,6 @@
         margin: 20px;
         line-height: 30px;
         text-align: left;
-
     }
 
     .care__options {

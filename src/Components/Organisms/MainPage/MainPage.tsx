@@ -6,14 +6,14 @@ import HealthCare from "../../HealthCare/HealthCare";
 import Introduce from "../../Introduce/Introduce";
 
 const MainPage = () => {
-  return (
-    <div className={styles.mainPage}>
-      <Navigation />
-      <HealthCare />
-      <Introduce />
-      <Fundamentals />
-    </div>
-  );
+    return (
+        <div className={styles.mainPage}>
+            <Navigation />
+            <HealthCare />
+            <Introduce />
+            <Fundamentals />
+        </div>
+    );
 };
 
 export default MainPage;

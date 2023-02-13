@@ -1,12 +1,12 @@
 @import "../Utilities/variables.scss";
 
 @mixin spanBold {
-    font-family: 'FuturaPTExtraBold';
+    font-family: "FuturaPTExtraBold";
 }
 
 @mixin header {
     font-size: clamp(12px, 1.9em, 36px);
-    font-family: 'FuturaPTBold';
+    font-family: "FuturaPTBold";
     color: $pink;
     margin-bottom: 40px;
 }

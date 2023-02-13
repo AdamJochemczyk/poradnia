@@ -6,10 +6,9 @@
     margin-top: 100px;
     font-size: calc(12px + 0.25vw);
 
-
     &__header {
         font-size: clamp(12px, 1.9em, 36px);
-        font-family: 'FuturaPTBold';
+        font-family: "FuturaPTBold";
         color: $pink;
         margin-bottom: 40px;
     }
@@ -19,7 +18,7 @@
         width: min(100%, 1200px);
         margin: 0px auto;
         color: $darkGreen;
-        font-family: 'FuturaPTHeavy';
+        font-family: "FuturaPTHeavy";
 
         p {
             margin: 20px 0px;
@@ -33,7 +32,7 @@
     }
 
     .bold {
-        font-family: 'FuturaPTExtraBold';
+        font-family: "FuturaPTExtraBold";
     }
 }
 
