@@ -12,10 +12,10 @@ function Introduce() {
             Katowicach oraz uczestnicząc w wielu kursach i szkoleniach. Dietetykiem jestem 
             zarówno z wykształcenia jak i z zamiłowania.</p>
             <img src={gosia} alt="Gosia holding mandarines" className={styles.image} />
-            <p><span className={styles.bold}>Co najbardziej lubię w swojej pracy? </span>Pomaganie moim klientom i wspieranie ich w dążeniu do celu. Lubię radość, 
-            która towarzyszy im po odebraniu lepszych wyników, polepszeniu samopoczucia na co dzień, utracie zbędnych kilogramów 
-            i włożeniu ubrania, które utknęło na dłużej w szafie. A przede wszystkim, uwielbiam ich radość z bycia na diecie!.</p>
-            <p>Każdy z nas jest inny, dlatego indywidualne podejście do potrzeb każdego klienta jest dla mnie priorytetem.</p>
+            <p>
+              Żywienie jest kluczowym elementem naszego zdrowia i dobrego samopoczucia. Moja Poradnia powstała z myślą o osobach, które nie tylko chcą zgubić zbędne kilogramy, ale także nauczyć się świadomego odżywiania, czyli dokonywania prawidłowych wyborów żywieniowych i komponowania posiłków, również po zakończeniu stosowania jadłospisów.
+            </p>
+            <p>Także osoby chore, dla których dietoterapia jest kluczowa w poprawieniu wyników i samopoczucia na co dzień, dzięki edukacji żywieniowej i regularnemu stosowaniu zasad zdrowego odżywiania zmienią dietę w stałe nawyki</p>
         </div>
     </div>
   )

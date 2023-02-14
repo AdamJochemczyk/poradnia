@@ -4,6 +4,7 @@ import { Navigation } from "../../Navigation/Navigation";
 import Fundamentals from "../../Fundamentals/Fundamentals";
 import HealthCare from "../../HealthCare/HealthCare";
 import Introduce from "../../Introduce/Introduce";
+import { WhenHelp } from "src/Components/WhenHelp/WhenHelp";
 
 const MainPage = () => {
   return (
@@ -12,6 +13,7 @@ const MainPage = () => {
       <HealthCare />
       <Introduce />
       <Fundamentals />
+      <WhenHelp />
     </div>
   );
 };

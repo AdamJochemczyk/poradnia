@@ -1,5 +1,5 @@
 import styles from "./HealthCare.module.scss"
-import options from "../../assets/Graphics/optionsDiet.svg"
+import options from "../../assets/Graphics/mobile_online.png"
 import logo from "../../assets/Photos/logokolor2.png"
 
 function HealthCare() {

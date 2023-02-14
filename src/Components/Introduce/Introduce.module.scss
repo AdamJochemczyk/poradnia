@@ -1,35 +1,26 @@
 @import "../../Utilities/variables.scss";
 
 .introduce {
-    width: 100vw;
     padding: 20px;
-    margin-top: 100px;
-    font-size: calc(12px + 0.25vw);
-
+    margin-top: 73px;
 
     &__header {
-        font-size: clamp(12px, 1.9em, 36px);
         font-family: 'FuturaPTBold';
         color: $pink;
         margin-bottom: 40px;
+        font-size: 20px;
     }
 
     &__text {
         font-size: 1em;
-        width: min(100%, 1200px);
-        margin: 0px auto;
         color: $darkGreen;
         font-family: 'FuturaPTHeavy';
+        font-size: 14px;
 
         p {
             margin: 20px 0px;
-            width: clamp(350px, 40%, 900px);
         }
 
-        .image {
-            width: clamp(200px, 50%, 400px);
-            float: right;
-        }
     }
 
     .bold {
