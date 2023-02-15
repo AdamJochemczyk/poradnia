@@ -1,4 +1,4 @@
-import fork from "../assets/Graphics/fork.png"
+import fork from "../assets/Graphics/fork.svg"
 import cart from "../assets/Graphics/cart.png"
 import heart from "../assets/Graphics/heart.png"
 import stetoscope from "../assets/Graphics/stetoscope.png"

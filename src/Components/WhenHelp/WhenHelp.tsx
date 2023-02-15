@@ -1,3 +1,4 @@
+import { Button } from "../Buttons/Button";
 import { PointWithText } from "../PointWithText/PointWithText";
 import style from "./WhenHelp.module.scss";
 
@@ -66,7 +67,7 @@ export const WhenHelp = () => {
         </p>
         <div className={style.center}>
           <a href="">
-            <button className={style.btn}>Oferta</button>
+            <Button text="Oferta" />
           </a>
         </div>
       </div>

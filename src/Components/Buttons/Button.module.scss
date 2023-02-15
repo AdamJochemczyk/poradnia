@@ -1,0 +1,10 @@
+@import "../../Utilities/variables.scss";
+.btn {
+  background: #ffffff;
+  border: 2px solid $darkGreen;
+  border-radius: 6px;
+  padding: 10px 15px;
+  color: $darkGreen;
+  text-transform: uppercase;
+  font-family: "FuturaPTBold";
+}
