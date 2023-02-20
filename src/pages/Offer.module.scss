@@ -1,0 +1,201 @@
+@import "../Utilities/variables.scss";
+
+.wrapper {
+    margin: 0 20px 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.description {
+    color: $darkGreen;
+    font-family: "Futura PT";
+    font-size: 11px;
+    font-weight: 800;
+    margin-top: 8px;
+
+    span {
+        font-family: "FuturaPTExtraBold";
+        color: $darkGreen;
+    }
+
+    &__small {
+        color: $darkGreen;
+        font-family: "Futura PT";
+        font-size: 9px;
+        font-weight: 800;
+        margin-top: 8px;
+
+        span {
+            font-family: "FuturaPTExtraBold";
+            color: $darkGreen;
+        }
+    }
+}
+
+.mobileAndOnlineDiets {
+    display: grid;
+    align-items: end;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 16px;
+
+    &__innerContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__image {
+        object-fit: cover;
+        width: 30%;
+    }
+
+    &__paragraph {
+        color: $pink;
+        font-family: "Futura PT";
+        font-weight: 700;
+        font-size: 16px;
+        max-width: 100px;
+        word-wrap: break-word;
+        text-align: center;
+    }
+}
+
+.header {
+    font-size: 20px;
+    font-family: "FuturaPTBold";
+    color: $pink;
+    margin: 32px 0 6px 0;
+    text-transform: uppercase;
+
+    &__green {
+        font-size: 14px;
+        color: $darkGreen;
+        font-family: "FuturaPTBold";
+        text-transform: uppercase;
+    }
+}
+
+.boxContainer {
+    margin-top: 20px;
+}
+
+.boxOffer {
+    background: linear-gradient(
+        180deg,
+        rgba(243, 155, 155, 0.54) 30.79%,
+        rgba(255, 255, 255, 0.52) 130.79%
+    );
+    border: 2px solid #f39b9b;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    padding: 10px 3px 10px 10px;
+    color: $darkGreen;
+    margin-top: 10px;
+
+    &__title {
+        font-family: "FuturaPTBold";
+        font-size: 12px;
+
+        &__small {
+            font-family: "FuturaPTBold";
+            font-size: 8px;
+        }
+
+        &__normal {
+            font-family: "Futura PT";
+            font-size: 12px;
+
+            span {
+                text-decoration: line-through;
+                text-decoration-thickness: 2px;
+            }
+        }
+    }
+
+    &__innerContainer {
+        display: flex;
+        padding-right: 10px;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    &__withButton {
+        display: flex;
+        padding-right: 10px;
+        justify-content: space-between;
+    }
+
+    &__list {
+        padding: 6px 18px 0px;
+
+        %list-item {
+            font-family: "Futura PT";
+            font-weight: 600;
+            font-size: 9px;
+            color: $darkGreen;
+        }
+
+        %list-item-dash {
+            @extend %list-item;
+            font-family: "FuturaPTBold";
+            font-size: 8px;
+            list-style-type: none;
+            text-indent: -5px;
+            &:before {
+                content: "-";
+                position: absolute;
+                margin-left: -3px;
+            }
+        }
+
+        &__item {
+            @extend %list-item;
+        }
+
+        &__itemDash {
+            @extend %list-item-dash;
+        }
+
+        &__spacedItem {
+            @extend %list-item;
+            padding: 6px 0px;
+        }
+    }
+
+    &__paragraph {
+        font-family: "FuturaPTBold";
+        font-size: 8px;
+        line-height: 13px;
+        color: $darkGreen;
+    }
+}
+
+.textContainer {
+    max-width: 100%;
+    margin-top: 24px;
+    text-align: justify;
+
+    &__almostHalfScreen {
+        max-width: 65%;
+        margin-top: 24px;
+        text-align: justify;
+    }
+
+    &__withBottomMargin {
+        max-width: 100%;
+        margin-bottom: 24px;
+        text-align: justify;
+    }
+
+    &__halfScreen {
+        max-width: 50%;
+    }
+}
