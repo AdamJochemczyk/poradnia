@@ -1,6 +1,6 @@
-import styles from "./HealthCare.module.scss"
-import options from "../../assets/Graphics/mobile_online.png"
-import logo from "../../assets/Photos/logokolor2.png"
+import styles from "./HealthCare.module.scss";
+import options from "../../assets/Graphics/mobile_online.png";
+import logo from "../../assets/Photos/logokolor2.png";
 
 function HealthCare() {
     return (

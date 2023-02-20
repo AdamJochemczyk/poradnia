@@ -1,56 +1,56 @@
 @import "../../Utilities/variables.scss";
 
 .introduce {
-  padding: 20px;
-  margin-top: 73px;
+    padding: 20px;
+    margin-top: 73px;
 
-  &__header {
-    font-family: "FuturaPTBold";
-    color: $pink;
-    margin-bottom: 40px;
-    font-size: 20px;
-  }
-
-  &__text {
-    font-size: 1em;
-    color: $darkGreen;
-    font-family: "FuturaPTHeavy";
-    font-size: 14px;
-
-    p {
-      margin: 20px 0px;
+    &__header {
+        font-family: "FuturaPTBold";
+        color: $pink;
+        margin-bottom: 40px;
+        font-size: 20px;
     }
-  }
 
-  .bold {
-    font-family: "FuturaPTExtraBold";
-  }
+    &__text {
+        font-size: 1em;
+        color: $darkGreen;
+        font-family: "FuturaPTHeavy";
+        font-size: 14px;
+
+        p {
+            margin: 20px 0px;
+        }
+    }
+
+    .bold {
+        font-family: "FuturaPTExtraBold";
+    }
 }
 .image_desktop {
-  display: none;
+    display: none;
 }
 
 @media screen and (min-width: 600px) {
-  .introduce {
-    &__header {
-      font-size: 48px;
-      margin-left: 20px;
+    .introduce {
+        &__header {
+            font-size: 48px;
+            margin-left: 20px;
+        }
+        &__text {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 160px;
+            font-size: 20px;
+        }
+        &__left {
+            max-width: 756px;
+        }
     }
-    &__text{
-        display: flex;
-        justify-content: space-between;
-        padding: 0 160px;
-        font-size: 20px;
+    .image {
+        display: none;
     }
-    &__left{
-        max-width: 756px;
+    .image_desktop {
+        display: block;
+        max-width: 521px;
     }
-  }
-  .image {
-    display: none;
-  }
-  .image_desktop {
-    display: block;
-    max-width: 521px;
-  }
 }

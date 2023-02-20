@@ -23,7 +23,7 @@
         width: 100vw;
         height: 70px;
         position: absolute;
-        background-image : linear-gradient(180deg, #FF9B4D 0%, rgba(255, 155, 77, 0) 100%);
+        background-image: linear-gradient(180deg, #ff9b4d 0%, rgba(255, 155, 77, 0) 100%);
     }
     &__bottomGradient {
         position: absolute;
@@ -32,14 +32,13 @@
         width: 100vw;
         height: 150px;
         position: absolute;
-        background-image : linear-gradient(180deg, #FF9B4D 0%, rgba(255, 155, 77, 0) 100%);
+        background-image: linear-gradient(180deg, #ff9b4d 0%, rgba(255, 155, 77, 0) 100%);
         transform: rotate(-180deg);
         z-index: 5;
     }
 
-
     &__option {
-        font-family: 'FuturaPTHeavy', sans-serif;
+        font-family: "FuturaPTHeavy", sans-serif;
         z-index: 15;
         color: $darkGreen;
     }
@@ -88,7 +87,7 @@
     padding: 20px;
     min-width: 100vw;
     min-height: 100px;
-    background: linear-gradient(180deg, #FF9B4D 23.44%, #FFFFFF 100%);
+    background: linear-gradient(180deg, #ff9b4d 23.44%, #ffffff 100%);
     @include flexB;
 
     &__logo {
@@ -140,4 +139,3 @@
         }
     }
 }
-

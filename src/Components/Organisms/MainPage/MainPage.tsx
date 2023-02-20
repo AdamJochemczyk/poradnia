@@ -8,16 +8,16 @@ import { WhenHelp } from "src/Components/WhenHelp/WhenHelp";
 import { Footer } from "src/Components/Footer/Footer";
 
 const MainPage = () => {
-  return (
-    <div className={styles.mainPage}>
-      <Navigation />
-      <HealthCare />
-      <Introduce />
-      <Fundamentals />
-      <WhenHelp />
-      <Footer />
-    </div>
-  );
+    return (
+        <div className={styles.mainPage}>
+            <Navigation />
+            <HealthCare />
+            <Introduce />
+            <Fundamentals />
+            <WhenHelp />
+            <Footer />
+        </div>
+    );
 };
 
 export default MainPage;
