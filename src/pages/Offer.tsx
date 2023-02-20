@@ -23,7 +23,6 @@ export const Offer = () => {
                 <section>
                     <div className={styles.container}>
                         <div>
-                            {/* TODO: powiększyć miskę */}
                             <picture>
                                 {/* <source
                                     srcSet="/media/cc0-images/surfer-240-200.jpg"
@@ -80,7 +79,6 @@ export const Offer = () => {
                             </p>
                         </div>
                         <div>
-                            {/* TODO: powiększyć garnek */}
                             <picture>
                                 <img src={potOfVegetables} alt="Pot of vegetables" />
                             </picture>
@@ -173,7 +171,6 @@ export const Offer = () => {
                             </ul>
                         </div>
                         <div>
-                            {/* TODO: powiększyć koleżke na latającym spodku */}
                             <picture>
                                 <img src={personOnScale} alt="Person on scale" />
                             </picture>
