@@ -15,7 +15,7 @@
 .description {
     color: $darkGreen;
     font-family: "Futura PT";
-    font-size: 11px;
+    font-size: clamp(11px, 2vw, 24px);
     font-weight: 800;
     margin-top: 8px;
 
@@ -27,7 +27,7 @@
     &__small {
         color: $darkGreen;
         font-family: "Futura PT";
-        font-size: 9px;
+        font-size: clamp(9px, 2vw, 20px);
         font-weight: 800;
         margin-top: 8px;
 
@@ -61,7 +61,7 @@
         color: $pink;
         font-family: "Futura PT";
         font-weight: 700;
-        font-size: 16px;
+        font-size: clamp(16px, 2vw, 32px);
         max-width: 100px;
         word-wrap: break-word;
         text-align: center;
@@ -69,14 +69,14 @@
 }
 
 .header {
-    font-size: 20px;
+    font-size: clamp(20px, 2vw, 48px);
     font-family: "FuturaPTBold";
     color: $pink;
     margin: 32px 0 6px 0;
     text-transform: uppercase;
 
     &__green {
-        font-size: 14px;
+        font-size: clamp(14px, 2vw, 24px);
         color: $darkGreen;
         font-family: "FuturaPTBold";
         text-transform: uppercase;
@@ -102,21 +102,21 @@
 
     &__title {
         font-family: "FuturaPTBold";
-        font-size: 12px;
-
-        &__small {
-            font-family: "FuturaPTBold";
-            font-size: 8px;
-        }
+        font-size: clamp(12px, 2vw, 24px);
 
         &__normal {
             font-family: "Futura PT";
-            font-size: 12px;
+            font-size: clamp(12px, 2vw, 32px);
 
             span {
                 text-decoration: line-through;
                 text-decoration-thickness: 2px;
             }
+        }
+
+        &__small {
+            font-family: "FuturaPTBold";
+            font-size: clamp(8px, 2vw, 20px);
         }
     }
 
@@ -139,14 +139,14 @@
         %list-item {
             font-family: "Futura PT";
             font-weight: 600;
-            font-size: 9px;
+            font-size: clamp(9px, 2vw, 20px);
             color: $darkGreen;
         }
 
         %list-item-dash {
             @extend %list-item;
             font-family: "FuturaPTBold";
-            font-size: 8px;
+            font-size: clamp(8px, 2vw, 20px);
             list-style-type: none;
             text-indent: -5px;
             &:before {
@@ -172,7 +172,7 @@
 
     &__paragraph {
         font-family: "FuturaPTBold";
-        font-size: 8px;
+        font-size: clamp(8px, 2vw, 20px);
         line-height: 13px;
         color: $darkGreen;
     }
