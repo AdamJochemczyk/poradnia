@@ -3,6 +3,7 @@
   margin: 0 20px;
 }
 .title {
+  text-transform: uppercase;
   color: $pink;
   font-family: "FuturaPTBold";
 }
@@ -25,6 +26,7 @@
   font-size: 9px;
   padding: 10px 15px;
   margin-bottom: 9px;
+  max-width: 613px;
   &_primary {
     font-family: "FuturaPTExtraBold";
     text-transform: uppercase;
@@ -37,8 +39,76 @@
   text-transform: uppercase;
   font-size: 14px;
 }
-.center{
-    display: flex;
-    justify-content: center;
-    margin-top: 12px;
+.center {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+@media screen and (min-width: 600px) {
+  .title {
+    font-size: 48px;
+  }
+  .box {
+    background: linear-gradient(
+      180deg,
+      rgba(243, 155, 155, 0.54) 30.79%,
+      rgba(255, 255, 255, 0.52) 130.79%
+    );
+    border: 8px solid #f39b9b;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-size: 20px;
+  }
+  .step {
+    font-size: 24px;
+  }
+
+  .desktop{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 296px 200px 115px 115px 115px 115px;
+    margin-bottom: 118px;
+    margin-top: 80px;
+  }
+  .point1{
+    grid-column: 1/2;
+    grid-row:1;
+  }
+  .point2{
+    grid-column: 2/3;
+    grid-row:1;
+  }
+  .point3{
+    grid-column: 1/2;
+    grid-row: 2;
+  }
+  .subtitle{
+    grid-column: 1/2;
+    grid-row: 3;
+    font-size: 28px;
+    margin-top: 60px;
+  }
+  .box1{
+    grid-column: 1/2;
+    grid-row: 4;
+  }
+  .box2{
+    grid-column: 1/2;
+    grid-row: 5;
+  }
+  .box3{
+    grid-column: 1/2;
+    grid-row: 6;
+  }
+  .point4{
+    grid-column: 2/3;
+    grid-row: 2;
+  }
+  .offer{
+    grid-column: 2/3;
+    grid-row: 6;
+    max-width: 550px;
+    justify-self: flex-end;
+  }
+  
 }

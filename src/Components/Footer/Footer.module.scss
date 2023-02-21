@@ -28,7 +28,7 @@
       font-family: "FuturaPTBold";
     }
   }
-  &_checkbox_cont{
+  &_checkbox_cont {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -42,53 +42,123 @@
     width: 16px;
     height: 16px;
   }
-  &_send_cont{
+  &_send_cont {
     display: flex;
     justify-content: flex-end;
     margin-top: 15px;
   }
+}
+.contactFormSection {
+  display: none;
 }
 .contact {
   background: linear-gradient(180deg, rgba(255, 155, 77, 0) 0%, #ff9b4d 100%);
   color: $darkGreen;
   font-size: 12px;
 
-  &_icon_cont{
+  &_icon_cont {
     display: flex;
     margin-bottom: 15px;
     gap: 10px;
     align-items: center;
     padding-left: 20px;
   }
-  &_icon{
+  &_icon {
     width: 12px;
     height: 12px;
   }
-  &_fb{
+  &_fb {
     width: 22px;
     height: 22px;
     margin-bottom: 28px;
   }
-  &_insta{
+  &_insta {
     width: 22px;
     height: 22px;
   }
 }
-.socials{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 28px;
-    gap: 30px;
+.socials {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 28px;
+  gap: 30px;
 }
-.logos{
+.logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  padding: 15px 20px;
+  gap: 10px;
+  img {
+    height: 25px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .newsletter {
+    font-size: 28px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    padding-left: 105px;
+    padding-right: 160px;
+    gap: 100px;
+    min-height: 430px;
+    &_input {
+      max-width: 638px;
+      min-height: 80px;
+      border: 3px solid #005b26;
+      border-radius: 10px;
+      padding: 20px 42px;
+      font-size: 24px;
+      &::placeholder {
+        font-size: 24px;
+      }
+    }
+    &_checkbox_cont {
+      gap: 12px;
+      font-size: 16px;
+    }
+    &_checkbox {
+      width: 35px;
+      height: 35px;
+    }
+  }
+  .contactFormSection {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 24px;
-    padding: 15px 20px;
-    gap: 10px;
-    img{
-        height: 25px;
+  }
+  .contactFormHeader {
+    font-family: "FuturaPTBold";
+    font-size: 40px;
+    color: #005b26;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .contactForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 40px;
+    &_input {
+      min-height: 80px;
+      border: 3px solid #005b26;
+      border-radius: 10px;
+      padding: 20px 42px;
+      font-size: 24px;
+      font-family: "FuturaPTBold";
+      &::placeholder {
+        font-size: 24px;
+        color: $pink;
+      }
     }
+    &_area{
+      resize: vertical;
+      min-height: 210px;
+      width: 433px;
+    }
+  }
 }
