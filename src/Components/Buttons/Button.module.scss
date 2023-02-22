@@ -7,6 +7,9 @@
   color: $darkGreen;
   text-transform: uppercase;
   font-family: "FuturaPTBold";
+  &:hover{
+    cursor: pointer;
+  }
 }
 @media screen and (min-width: 600px) {
   .btn {

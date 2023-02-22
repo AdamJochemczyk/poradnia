@@ -161,4 +161,46 @@
       width: 433px;
     }
   }
+  .contact{
+    padding: 0 2.5%;
+    padding-top: 100px;
+    .links{
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+    }
+    .socials_icons{
+      display: flex;
+    }
+    &_icon_cont {
+      font-size: 25px;
+    }
+    &_icon{
+      width: 29px;
+      height: 29px;
+    }
+    &_insta{
+      width: 58px;
+      height: 58px;
+    }
+    &_fb{
+      width: 29px;
+      height: 53px;
+    }
+  }
+  .socials_icons{
+    gap: 80px;
+    flex-direction: row-reverse;
+  }
+  .fork{
+    position: absolute;
+    bottom: 0;
+    right: 2%;
+  }
+  .logos{
+    justify-content: start;
+    img{
+      height: 50px;
+    }
+  }
 }

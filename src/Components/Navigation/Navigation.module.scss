@@ -2,11 +2,10 @@
 @import "../../Utilities/utilities.scss";
 
 .menu {
-    font-size: calc(15px + 1vw);
+    font-size: 15px;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -20,7 +19,6 @@
         position: absolute;
         left: 0;
         top: 0;
-        width: 100vw;
         height: 70px;
         position: absolute;
         background-image : linear-gradient(180deg, #FF9B4D 0%, rgba(255, 155, 77, 0) 100%);
@@ -29,7 +27,6 @@
         position: absolute;
         left: 0;
         top: 100px;
-        width: 100vw;
         height: 150px;
         position: absolute;
         background-image : linear-gradient(180deg, #FF9B4D 0%, rgba(255, 155, 77, 0) 100%);
@@ -86,7 +83,6 @@
 
 .navbar {
     padding: 20px;
-    min-width: 100vw;
     min-height: 100px;
     background: linear-gradient(180deg, #FF9B4D 23.44%, #FFFFFF 100%);
     @include flexB;
@@ -108,7 +104,6 @@
         gap: 5px;
 
         .handle__element {
-            width: 100%;
             height: 5px;
             background-color: $darkGreen;
             border-radius: 20px;
