@@ -4,7 +4,11 @@ import { PageTitle } from "src/Components/PageTitle/PageTitle";
 import { Button } from "src/Components/Buttons/Button";
 import styles from "./Offer.module.scss";
 import bowlOffer from "src/assets/Photos/bowl.png";
+import bowlOfferMedium from "src/assets/Photos/bowl@2x.png";
+import bowlOfferLarge from "src/assets/Photos/bowl@3x.png";
+import fruits from "src/assets/Photos/fruits.png";
 import potOfVegetables from "src/assets/Photos/potOfVegetables.png";
+import potOfVegetablesLarge from "src/assets/Photos/potOfVegetablesLarge.png";
 import personOnScale from "src/assets/Photos/personOnScale.png";
 import {
     MOBILE_AND_ONLINE_DIETS,
@@ -20,14 +24,13 @@ export const Offer = () => {
             <Navigation />
             <article className={styles.wrapper}>
                 <PageTitle text={"zacznij już teraz"} />
-                <section>
+                <section className={styles.mobileAndOnlineDietsSection}>
                     <div className={styles.container}>
                         <div>
                             <picture>
-                                {/* <source
-                                    srcSet="/media/cc0-images/surfer-240-200.jpg"
-                                    media="min-width: 600px)"></source> */}
-                                <img src={bowlOffer} alt="Bowl" />
+                                <source media="(min-width: 1440px)" srcSet={bowlOfferLarge} />
+                                <source media="(min-width: 768px)" srcSet={bowlOfferMedium} />
+                                <img className={styles.bowlImage} src={bowlOffer} alt="Bowl" />
                             </picture>
                         </div>
                         <div>
@@ -45,96 +48,120 @@ export const Offer = () => {
                         </div>
                     </div>
                     <div className={styles.mobileAndOnlineDiets}>
-                        {MOBILE_AND_ONLINE_DIETS.map(({ src, alt, text }) => {
+                        {MOBILE_AND_ONLINE_DIETS.map(({ src, srcLarge, alt, text }) => {
                             return (
                                 <div
                                     key={text + src}
                                     className={styles.mobileAndOnlineDiets__innerContainer}>
-                                    <img
-                                        className={styles.mobileAndOnlineDiets__image}
-                                        src={src}
-                                        alt={alt}
-                                    />
-                                    <p className={styles.mobileAndOnlineDiets__paragraph}>{text}</p>
+                                    <picture
+                                        className={styles.mobileAndOnlineDiets__pictureContainer}>
+                                        <source media="(min-width: 768px)" srcSet={srcLarge} />
+                                        <img src={src} alt={alt} />
+                                    </picture>
+                                    <p className={styles.mobileAndOnlineDiets__paragraph}>
+                                        {text.split(" ")[0]}
+                                        <br />
+                                        {text.split(" ")[1]}
+                                    </p>
                                 </div>
                             );
                         })}
                     </div>
                 </section>
-                <section>
-                    <h2 className={styles.header}>OFERTA</h2>
-                    <div className={styles.container}>
-                        <div>
-                            <p className={styles.description}>
-                                <span>
-                                    Poradnia Dietetyczna powstała z myślą o tworzeniu elastycznych,
-                                    spersonalizowanych jadłospisów dopasowanych do potrzeb i
-                                    preferencji wszystkich klientów.
-                                </span>
-                            </p>
-                            <p className={styles.description}>
-                                Konsultacje odbywają się w formie{" "}
-                                <span>online lub telefonicznie.</span> Jako dietetyk mobilny oferuję
-                                także konsultacje z dojazdem do domu lub w wyznaczone miejsce.
-                            </p>
-                        </div>
-                        <div>
-                            <picture>
+                <div>
+                    <picture>
+                        <source
+                            sizes="(min-width: 1024px) 100vw"
+                            media="(min-width: 1024px)"
+                            srcSet={fruits}
+                        />
+                        <img className={styles.fruitsImage} src={fruits} alt="Fruits" />
+                    </picture>
+                </div>
+                <section className={styles.potOfVegetablesSection}>
+                    <div>
+                        <h2 className={styles.header}>OFERTA</h2>
+                        <div className={styles.container}>
+                            <div>
+                                <p className={styles.description}>
+                                    <span>
+                                        Poradnia Dietetyczna powstała z myślą o tworzeniu
+                                        elastycznych, spersonalizowanych jadłospisów dopasowanych do
+                                        potrzeb i preferencji wszystkich klientów.
+                                    </span>
+                                </p>
+                                <p className={styles.description}>
+                                    Konsultacje odbywają się w formie{" "}
+                                    <span>online lub telefonicznie.</span> Jako dietetyk mobilny
+                                    oferuję także konsultacje z dojazdem do domu lub w wyznaczone
+                                    miejsce.
+                                </p>
+                            </div>
+                            <div className={styles.potOfVegetables}>
                                 <img src={potOfVegetables} alt="Pot of vegetables" />
-                            </picture>
+                            </div>
                         </div>
-                    </div>
-                    <div className={styles.boxOfferContainer}>
-                        {OFFER_DATA.map(offer => {
-                            if (offer.listText) {
-                                return (
-                                    <div key={offer.title} className={styles.boxOffer}>
-                                        <p className={styles.boxOffer__title}>{offer.title}</p>
-                                        <div>
-                                            <ul className={styles.boxOffer__list}>
-                                                {offer.listText.map(text => (
-                                                    <li
-                                                        key={text}
-                                                        className={styles.boxOffer__list__item}>
-                                                        {text}
-                                                    </li>
-                                                ))}
-                                            </ul>
+                        <div className={styles.boxOfferContainer}>
+                            {OFFER_DATA.map(offer => {
+                                if (offer.listText) {
+                                    return (
+                                        <div key={offer.title} className={styles.boxOffer}>
+                                            <p className={styles.boxOffer__title}>{offer.title}</p>
+                                            <div>
+                                                <ul className={styles.boxOffer__list}>
+                                                    {offer.listText.map(text => (
+                                                        <li
+                                                            key={text}
+                                                            className={styles.boxOffer__list__item}>
+                                                            {text}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </div>
-                                );
-                            } else if (offer.extraText) {
+                                    );
+                                } else if (offer.extraText) {
+                                    return (
+                                        <div key={offer.title} className={styles.boxOffer}>
+                                            <p className={styles.boxOffer__title__small}>
+                                                {offer.title}
+                                            </p>
+                                            <div className={styles.boxOffer__innerContainer}>
+                                                <ul className={styles.boxOffer__list}>
+                                                    {offer.extraText.map(text => (
+                                                        <li
+                                                            key={text}
+                                                            className={
+                                                                styles.boxOffer__list__itemDash
+                                                            }>
+                                                            {text}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                                <p className={styles.boxOffer__paragraph}>
+                                                    {offer.price}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    );
+                                }
                                 return (
                                     <div key={offer.title} className={styles.boxOffer}>
-                                        <p className={styles.boxOffer__title__small}>
-                                            {offer.title}
-                                        </p>
                                         <div className={styles.boxOffer__innerContainer}>
-                                            <ul className={styles.boxOffer__list}>
-                                                {offer.extraText.map(text => (
-                                                    <li
-                                                        key={text}
-                                                        className={styles.boxOffer__list__itemDash}>
-                                                        {text}
-                                                    </li>
-                                                ))}
-                                            </ul>
+                                            <p className={styles.boxOffer__paragraph}>
+                                                {offer.title}
+                                            </p>
                                             <p className={styles.boxOffer__paragraph}>
                                                 {offer.price}
                                             </p>
                                         </div>
                                     </div>
                                 );
-                            }
-                            return (
-                                <div key={offer.title} className={styles.boxOffer}>
-                                    <div className={styles.boxOffer__innerContainer}>
-                                        <p className={styles.boxOffer__paragraph}>{offer.title}</p>
-                                        <p className={styles.boxOffer__paragraph}>{offer.price}</p>
-                                    </div>
-                                </div>
-                            );
-                        })}
+                            })}
+                        </div>
+                    </div>
+                    <div className={styles.potOfVegetablesLarge}>
+                        <img src={potOfVegetablesLarge} alt="Pot of vegetables" />
                     </div>
                 </section>
                 <section>

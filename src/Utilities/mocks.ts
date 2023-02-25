@@ -4,7 +4,9 @@ import heart from "../assets/Graphics/heart.png";
 import stetoscope from "../assets/Graphics/stetoscope.png";
 import apple from "../assets/Graphics/Group.png";
 import carrot from "src/assets/Photos/carrot.png";
+import carrotLarge from "src/assets/Photos/carrotLarge.png";
 import grapefruit from "src/assets/Photos/grapefruit.png";
+import grapefruitLarge from "src/assets/Photos/grapefruitLarge.png";
 
 export const FUNDAMENTALS = [
 
@@ -38,11 +40,13 @@ export const FUNDAMENTALS = [
 export const MOBILE_AND_ONLINE_DIETS = [
     {
         src: carrot,
+        srcLarge: carrotLarge,
         alt: "carrot",
         text: "DIETETYK MOBILNY",
     },
     {
         src: grapefruit,
+        srcLarge: grapefruitLarge,
         alt: "grapefruit",
         text: "DIETETYK ONLINE",
     },
