@@ -3,10 +3,11 @@
 
 .menu {
     font-size: 15px;
-    position: absolute;
+    position: sticky;
+    z-index: 10;
     top: 0;
     left: 0;
-    height: 200px;
+    height: 340px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,31 +15,17 @@
     background-color: #fff;
     overflow: hidden;
     z-index: 10;
-
-    &__topGradient {
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 70px;
-        position: absolute;
-        background-image : linear-gradient(180deg, #FF9B4D 0%, rgba(255, 155, 77, 0) 100%);
-    }
-    &__bottomGradient {
-        position: absolute;
-        left: 0;
-        top: 100px;
-        height: 150px;
-        position: absolute;
-        background-image : linear-gradient(180deg, #FF9B4D 0%, rgba(255, 155, 77, 0) 100%);
-        transform: rotate(-180deg);
-        z-index: 5;
-    }
+    background-image : linear-gradient(180deg, #FF9B4D, #FFF 40%, #FFF 60%, #FF9B4D 100%);
 
 
     &__option {
         font-family: 'FuturaPTHeavy', sans-serif;
-        z-index: 15;
         color: $darkGreen;
+        text-align: center;
+        text-decoration: none;
+        &:hover{
+            cursor: pointer;
+        }
     }
 
     &__links {
@@ -52,8 +39,8 @@
 
     &__close {
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 40px;
+        right: 35px;
         z-index: 10;
         display: flex;
         flex-direction: column;
@@ -82,10 +69,13 @@
 }
 
 .navbar {
+    position: sticky;
+    top: 0;
     padding: 20px;
     min-height: 100px;
     background: linear-gradient(180deg, #FF9B4D 23.44%, #FFFFFF 100%);
     @include flexB;
+    z-index: 10;
 
     &__logo {
         width: clamp(190px, 40%, 416px);
@@ -117,12 +107,7 @@
 
 @media screen and (min-width: 900px) {
     .navbar {
-        justify-content: flex-end;
         gap: 30px;
-
-        &__logo {
-            display: none;
-        }
 
         &__handle {
             display: none;

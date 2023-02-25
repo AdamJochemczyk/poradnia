@@ -16,7 +16,7 @@ import badajto from "../../assets/Graphics/badajto.png";
 export const Footer = () => {
   return (
     <footer className={style.container}>
-      <section className={style.newsletter}>
+      <section className={style.newsletter} id="#newsletter">
         <div>
           <p>
             Chcesz zobaczyć przykładowy jadłospis lub chcesz być na bieżąco?
