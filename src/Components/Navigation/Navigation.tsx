@@ -1,54 +1,82 @@
-import { useState } from "react"
-import styles from "./Navigation.module.scss"
-import photo from "../../assets/Photos/logoZielone.png"
+import { useState, useEffect } from "react";
+import styles from "./Navigation.module.scss";
+import photo from "../../assets/Photos/logoZielone.png";
+import { Link } from "react-router-dom";
+//@ts-ignore
+import { HashLink } from "react-router-hash-link";
 
-export const MenuToggled = ({closeAction}:{closeAction:()=>void}) => {
-
-    return (
-        <div className={styles.menu}>
-            <div className={styles.menu__topGradient} />
-            <div className={styles.menu__close} />
-            <div className={styles.menu__links}>
-                <p className={styles.menu__option}>OFERTA</p>
-                <p className={styles.menu__option}>DLA CIEBIE</p>
-                <p className={styles.menu__option}>ZAPISZ SIĘ</p>
-                <p className={styles.menu__option}>KONTAKT</p>
-            </div>
-            <div className={styles.menu__bottomGradient} />
-            <button onClick={() => closeAction()} className={styles.menu__close}>
-                <div className={styles.close__barP} />
-                <div className={styles.close__barL} />
-            </button>
-
-        </div>
-    )
-
-}
+export const MenuToggled = ({ closeAction }: { closeAction: () => void }) => {
+  return (
+    <div className={styles.menu}>
+      <div className={styles.menu__close} />
+      <div className={styles.menu__links}>
+        <Link to="/oferta" className={styles.menu__option}>
+          OFERTA
+        </Link>
+        <Link to="/dla-ciebie" className={styles.menu__option}>DLA CIEBIE</Link>
+        <HashLink smooth to="/#newsletter" className={styles.menu__option}>ZAPISZ SIĘ</HashLink>
+        <a href="tel:+48799288583" className={styles.menu__option}>
+          <div>KONTAKT</div>
+          <div>799 288 583</div>
+        </a>
+      </div>
+      <button onClick={() => closeAction()} className={styles.menu__close}>
+        <div className={styles.close__barP} />
+        <div className={styles.close__barL} />
+      </button>
+    </div>
+  );
+};
 
 export const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleClick = () => setIsOpen(!isOpen);
 
-    const [isOpen, setIsOpen] = useState(false)
-    const handleClick = () => setIsOpen(!isOpen)
+  const [showLogo, setShowLogo] = useState(false);
 
-    return (
-        <>
-        <nav className={styles.navbar}>
-            <div className={styles.navbar__logo}>
-                <img src={photo} alt="Logo" />
-            </div>
-            <div className={styles.navbar__handle} onClick={handleClick}>
-                <div className={styles.handle__element}></div>
-                <div className={styles.handle__element}></div>
-                <div className={styles.handle__element}></div>
-            </div>
-            <div className={styles.links__wide}>
-                <p className={styles.menu__option}>OFERTA</p>
-                <p className={styles.menu__option}>DLA CIEBIE</p>
-                <p className={styles.menu__option}>ZAPISZ SIĘ</p>
-                <p className={styles.menu__option}>KONTAKT</p>
-            </div>
-        </nav>
-        {isOpen && <MenuToggled closeAction={() => setIsOpen(false)}/> }
-        </>
-    )
-}
+  const handleLogoChange = () => {
+    if (window.innerWidth < 900) {
+      setShowLogo(true);
+    } else if (window.scrollY > 350) {
+      setShowLogo(true);
+    } else {
+      setShowLogo(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleLogoChange, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleLogoChange);
+    };
+  }, []);
+
+  return (
+    <>
+      <nav className={styles.navbar}>
+        <div className={styles.navbar__logo}>
+          {showLogo ? <img src={photo} alt="Logo" /> : null}
+        </div>
+        <div className={styles.navbar__handle} onClick={handleClick}>
+          <div className={styles.handle__element}></div>
+          <div className={styles.handle__element}></div>
+          <div className={styles.handle__element}></div>
+        </div>
+        <div className={styles.links__wide}>
+          <Link to="/oferta" className={styles.menu__option}>
+            OFERTA
+          </Link>
+          <Link to="/dla-ciebie" className={styles.menu__option}>
+            DLA CIEBIE
+          </Link>
+          <p className={styles.menu__option}>ZAPISZ SIĘ</p>
+          <a href="tel:+48799288583" className={styles.menu__option}>
+            <div>KONTAKT</div>
+            <div>799 288 583</div>
+          </a>
+        </div>
+      </nav>
+      {isOpen && <MenuToggled closeAction={() => setIsOpen(false)} />}
+    </>
+  );
+};
