@@ -1,206 +1,206 @@
 @import "../../Utilities/variables.scss";
 
 .container {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 .newsletter {
-  font-size: 14px;
-  padding: 30px 20px;
-  background: linear-gradient(180deg, #ff9b4d 0%, rgba(255, 155, 77, 0) 100%);
-  color: $darkGreen;
-  &_title {
-    margin: 20px 0;
-    font-family: "FuturaPTExtraBold";
-  }
-  &_form_control {
-    display: flex;
-  }
-  &_input {
-    background: #ffffff;
-    border: 2px solid #005b26;
-    border-radius: 7px;
-    padding: 8px 18px;
-    font-size: 11px;
-    width: 100%;
-    margin-bottom: 10px;
-    &::placeholder {
-      color: $pink;
-      font-family: "FuturaPTBold";
+    font-size: 14px;
+    padding: 30px 20px;
+    background: linear-gradient(180deg, #ff9b4d 0%, rgba(255, 155, 77, 0) 100%);
+    color: $darkGreen;
+    &_title {
+        margin: 20px 0;
+        font-family: "FuturaPTExtraBold";
     }
-  }
-  &_checkbox_cont {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 8px;
-    color: $pink;
-  }
-  &_checkbox {
-    background: #ffffff;
-    border: 2px solid #005b26;
-    border-radius: 1px;
-    width: 16px;
-    height: 16px;
-  }
-  &_send_cont {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 15px;
-  }
+    &_form_control {
+        display: flex;
+    }
+    &_input {
+        background: #ffffff;
+        border: 2px solid #005b26;
+        border-radius: 7px;
+        padding: 8px 18px;
+        font-size: 11px;
+        width: 100%;
+        margin-bottom: 10px;
+        &::placeholder {
+            color: $pink;
+            font-family: "FuturaPTBold";
+        }
+    }
+    &_checkbox_cont {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 8px;
+        color: $pink;
+    }
+    &_checkbox {
+        background: #ffffff;
+        border: 2px solid #005b26;
+        border-radius: 1px;
+        width: 16px;
+        height: 16px;
+    }
+    &_send_cont {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 15px;
+    }
 }
 .contactFormSection {
-  display: none;
+    display: none;
 }
 .contact {
-  background: linear-gradient(180deg, rgba(255, 155, 77, 0) 0%, #ff9b4d 100%);
-  color: $darkGreen;
-  font-size: 12px;
+    background: linear-gradient(180deg, rgba(255, 155, 77, 0) 0%, #ff9b4d 100%);
+    color: $darkGreen;
+    font-size: 12px;
 
-  &_icon_cont {
-    display: flex;
-    margin-bottom: 15px;
-    gap: 10px;
-    align-items: center;
-    padding-left: 20px;
-  }
-  &_icon {
-    width: 12px;
-    height: 12px;
-  }
-  &_fb {
-    width: 22px;
-    height: 22px;
-    margin-bottom: 28px;
-  }
-  &_insta {
-    width: 22px;
-    height: 22px;
-  }
+    &_icon_cont {
+        display: flex;
+        margin-bottom: 15px;
+        gap: 10px;
+        align-items: center;
+        padding-left: 20px;
+    }
+    &_icon {
+        width: 12px;
+        height: 12px;
+    }
+    &_fb {
+        width: 22px;
+        height: 22px;
+        margin-bottom: 28px;
+    }
+    &_insta {
+        width: 22px;
+        height: 22px;
+    }
 }
 .socials {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-top: 28px;
-  gap: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 28px;
+    gap: 30px;
 }
 .logos {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 24px;
-  padding: 15px 20px;
-  gap: 10px;
-  img {
-    height: 25px;
-  }
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    padding: 15px 20px;
+    gap: 10px;
+    img {
+        height: 25px;
+    }
 }
 
 @media screen and (min-width: 600px) {
-  .newsletter {
-    font-size: 28px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
-    padding-left: 105px;
-    padding-right: 160px;
-    gap: 100px;
-    min-height: 430px;
-    &_input {
-      max-width: 638px;
-      min-height: 80px;
-      border: 3px solid #005b26;
-      border-radius: 10px;
-      padding: 20px 42px;
-      font-size: 24px;
-      &::placeholder {
-        font-size: 24px;
-      }
+    .newsletter {
+        font-size: 28px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        padding-left: 105px;
+        padding-right: 160px;
+        gap: 100px;
+        min-height: 430px;
+        &_input {
+            max-width: 638px;
+            min-height: 80px;
+            border: 3px solid #005b26;
+            border-radius: 10px;
+            padding: 20px 42px;
+            font-size: 24px;
+            &::placeholder {
+                font-size: 24px;
+            }
+        }
+        &_checkbox_cont {
+            gap: 12px;
+            font-size: 16px;
+        }
+        &_checkbox {
+            width: 35px;
+            height: 35px;
+        }
     }
-    &_checkbox_cont {
-      gap: 12px;
-      font-size: 16px;
+    .contactFormSection {
+        display: flex;
+        justify-content: center;
     }
-    &_checkbox {
-      width: 35px;
-      height: 35px;
+    .contactFormHeader {
+        font-family: "FuturaPTBold";
+        font-size: 40px;
+        color: #005b26;
+        text-transform: uppercase;
+        text-align: center;
     }
-  }
-  .contactFormSection {
-    display: flex;
-    justify-content: center;
-  }
-  .contactFormHeader {
-    font-family: "FuturaPTBold";
-    font-size: 40px;
-    color: #005b26;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  .contactForm {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 22px;
-    margin-top: 40px;
-    &_input {
-      min-height: 80px;
-      border: 3px solid #005b26;
-      border-radius: 10px;
-      padding: 20px 42px;
-      font-size: 24px;
-      font-family: "FuturaPTBold";
-      &::placeholder {
-        font-size: 24px;
-        color: $pink;
-      }
+    .contactForm {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 22px;
+        margin-top: 40px;
+        &_input {
+            min-height: 80px;
+            border: 3px solid #005b26;
+            border-radius: 10px;
+            padding: 20px 42px;
+            font-size: 24px;
+            font-family: "FuturaPTBold";
+            &::placeholder {
+                font-size: 24px;
+                color: $pink;
+            }
+        }
+        &_area {
+            resize: vertical;
+            min-height: 210px;
+            width: 433px;
+        }
     }
-    &_area{
-      resize: vertical;
-      min-height: 210px;
-      width: 433px;
+    .contact {
+        padding: 0 2.5%;
+        padding-top: 100px;
+        .links {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+        }
+        .socials_icons {
+            display: flex;
+        }
+        &_icon_cont {
+            font-size: 25px;
+        }
+        &_icon {
+            width: 29px;
+            height: 29px;
+        }
+        &_insta {
+            width: 58px;
+            height: 58px;
+        }
+        &_fb {
+            width: 29px;
+            height: 53px;
+        }
     }
-  }
-  .contact{
-    padding: 0 2.5%;
-    padding-top: 100px;
-    .links{
-      display: flex;
-      justify-content: space-between;
-      width: 80%;
+    .socials_icons {
+        gap: 80px;
+        flex-direction: row-reverse;
     }
-    .socials_icons{
-      display: flex;
+    .fork {
+        position: absolute;
+        bottom: 0;
+        right: 2%;
     }
-    &_icon_cont {
-      font-size: 25px;
+    .logos {
+        justify-content: start;
+        img {
+            height: 50px;
+        }
     }
-    &_icon{
-      width: 29px;
-      height: 29px;
-    }
-    &_insta{
-      width: 58px;
-      height: 58px;
-    }
-    &_fb{
-      width: 29px;
-      height: 53px;
-    }
-  }
-  .socials_icons{
-    gap: 80px;
-    flex-direction: row-reverse;
-  }
-  .fork{
-    position: absolute;
-    bottom: 0;
-    right: 2%;
-  }
-  .logos{
-    justify-content: start;
-    img{
-      height: 50px;
-    }
-  }
 }
