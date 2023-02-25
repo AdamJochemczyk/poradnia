@@ -4,16 +4,16 @@ import { Offer } from "./Offer";
 import { ForYou } from "./ForYou";
 
 export const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <Main />,
-    },
-    {
-        path: "/oferta",
-        element: <Offer />,
-    },
-    {
-        path: "/dla-ciebie",
-        element: <ForYou />,
-    },
+  {
+    path: "/",
+    element: <Main />,
+  },
+  {
+    path: "/oferta",
+    element: <Offer />,
+  },
+  {
+    path: "/dla-ciebie",
+    element: <ForYou />,
+  },
 ]);
