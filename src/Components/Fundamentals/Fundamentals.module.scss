@@ -1,109 +1,109 @@
 @import "../../Utilities/variables.scss";
 
 .fundamentals {
-    font-size: 12px;
+  font-size: 12px;
+  padding: 20px;
+
+  &__header {
+    font-family: "FuturaPTBold";
+    color: $pink;
+    margin-bottom: 40px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .content {
     padding: 20px;
 
-    &__header {
-        font-family: "FuturaPTBold";
-        color: $pink;
-        margin-bottom: 40px;
-        margin: 0;
-        text-transform: uppercase;
-    }
+    &__element {
+      display: flex;
+      align-items: center;
+      background: linear-gradient(
+        180deg,
+        rgba(243, 155, 155, 0.54) 0%,
+        rgba(255, 255, 255, 0.52) 100%
+      );
+      border: 2px solid #f39b9b;
+      border-radius: 7px;
+      padding: 21px 17px;
+      margin: 11px 0px;
 
-    .content {
-        padding: 20px;
+      .image {
+        width: 40px;
+        height: 40px;
+        flex-basis: 20%;
+      }
 
-        &__element {
-            display: flex;
-            align-items: center;
-            background: linear-gradient(
-                180deg,
-                rgba(243, 155, 155, 0.54) 0%,
-                rgba(255, 255, 255, 0.52) 100%
-            );
-            border: 2px solid #f39b9b;
-            border-radius: 7px;
-            padding: 21px 17px;
-            margin: 11px 0px;
+      .text {
+        text-align: center;
+        width: 85%;
+        font-family: "FuturaPTMedium";
+        font-size: 0.85em;
+        color: $darkGreen;
 
-            .image {
-                width: 40px;
-                height: 40px;
-                flex-basis: 20%;
-            }
-
-            .text {
-                text-align: center;
-                width: 85%;
-                font-family: "FuturaPTMedium";
-                font-size: 0.85em;
-                color: $darkGreen;
-
-                .bold {
-                    font-family: "FuturaPTBold";
-                }
-            }
+        .bold {
+          font-family: "FuturaPTBold";
         }
+      }
     }
+  }
 }
 
 @media screen and (min-width: 600px) {
-    .fundamentals {
-        &__header {
-            font-size: 48px;
-        }
-        .content {
-            display: flex;
-            justify-content: center;
-            &__desktop {
-                display: grid;
-                grid-template-columns: repeat(6, minmax(100px, 210px));
-                grid-template-rows: repeat(2, 317px);
-                column-gap: 55px;
-                row-gap: 40px;
-            }
-
-            &__element {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                padding: 20px;
-                padding-top: 50px;
-                border: 8px solid #f39b9b;
-                border-radius: 20px;
-
-                &:first-child {
-                    grid-column: 1/3;
-                }
-
-                &:nth-child(2) {
-                    grid-column: 3/5;
-                }
-
-                &:nth-child(3) {
-                    grid-column: 5/7;
-                }
-
-                &:nth-child(4) {
-                    grid-column: 2/4;
-                }
-
-                &:nth-child(5) {
-                    grid-column: 4/6;
-                }
-
-                .text {
-                    font-size: 20px;
-                }
-
-                .image {
-                    width: 90px;
-                    height: 120px;
-                    aspect-ratio: 1;
-                }
-            }
-        }
+  .fundamentals {
+    &__header {
+      font-size: 48px;
     }
+    .content {
+      display: flex;
+      justify-content: center;
+      &__desktop {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(100px, 210px));
+        grid-template-rows: repeat(2, 317px);
+        column-gap: 55px;
+        row-gap: 40px;
+      }
+
+      &__element {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        padding-top: 50px;
+        border: 8px solid #f39b9b;
+        border-radius: 20px;
+
+        &:first-child {
+          grid-column: 1/3;
+        }
+
+        &:nth-child(2) {
+          grid-column: 3/5;
+        }
+
+        &:nth-child(3) {
+          grid-column: 5/7;
+        }
+
+         &:nth-child(4) {
+          grid-column: 2/4;
+        }
+
+         &:nth-child(5) {
+          grid-column: 4/6;
+        }
+
+        .text {
+          font-size: 20px;
+        }
+
+        .image {
+          width: 90px;
+          height: 120px;
+          aspect-ratio: 1;
+        }
+      }
+    }
+  }
 }
