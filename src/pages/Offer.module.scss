@@ -12,6 +12,50 @@
     gap: 10px;
 }
 
+@media screen and (min-width: 768px) {
+    .mobileAndOnlineDietsSection {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        align-items: center;
+    }
+
+    .bowlImage {
+        padding-right: 24px;
+    }
+}
+
+// .fruitsImage {
+//     margin: 0 -20px;
+//     width: 100%;
+// }
+
+@media screen and (min-width: 1024px) {
+    .potOfVegetablesSection {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 12px 12px;
+        justify-items: center;
+        align-items: center;
+    }
+}
+
+.potOfVegetables {
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+}
+
+.potOfVegetablesLarge {
+    display: none;
+    @media screen and (min-width: 1024px) {
+        display: block;
+    }
+    @media screen and (min-width: 1440px) {
+        width: 90%;
+    }
+}
+
 .description {
     color: $darkGreen;
     font-family: "Futura PT";
@@ -52,9 +96,10 @@
         gap: 15px;
     }
 
-    &__image {
-        object-fit: cover;
-        width: 30%;
+    &__pictureContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     &__paragraph {
@@ -62,7 +107,6 @@
         font-family: "Futura PT";
         font-weight: 700;
         font-size: clamp(16px, 2vw, 32px);
-        max-width: 100px;
         word-wrap: break-word;
         text-align: center;
     }
@@ -102,7 +146,7 @@
 
     &__title {
         font-family: "FuturaPTBold";
-        font-size: clamp(12px, 2vw, 24px);
+        font-size: clamp(12px, 1.8vw, 24px);
 
         &__normal {
             font-family: "Futura PT";
@@ -116,7 +160,7 @@
 
         &__small {
             font-family: "FuturaPTBold";
-            font-size: clamp(8px, 2vw, 20px);
+            font-size: clamp(8px, 1.8vw, 20px);
         }
     }
 
@@ -139,14 +183,14 @@
         %list-item {
             font-family: "Futura PT";
             font-weight: 600;
-            font-size: clamp(9px, 2vw, 20px);
+            font-size: clamp(9px, 1.8vw, 20px);
             color: $darkGreen;
         }
 
         %list-item-dash {
             @extend %list-item;
             font-family: "FuturaPTBold";
-            font-size: clamp(8px, 2vw, 20px);
+            font-size: clamp(8px, 1.8vw, 20px);
             list-style-type: none;
             text-indent: -5px;
             &:before {
@@ -172,7 +216,7 @@
 
     &__paragraph {
         font-family: "FuturaPTBold";
-        font-size: clamp(8px, 2vw, 20px);
+        font-size: clamp(8px, 1.8vw, 20px);
         line-height: 13px;
         color: $darkGreen;
     }
