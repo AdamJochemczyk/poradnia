@@ -6,7 +6,7 @@
     padding: 20px;
     min-height: 900px;
     overflow: hidden;
-    font-size: calc(12px + 0.25vw);
+    font-size: 12px;
 
     @include flexB;
     flex-direction: column;

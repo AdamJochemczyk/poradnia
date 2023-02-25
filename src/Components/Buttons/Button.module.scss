@@ -1,10 +1,21 @@
 @import "../../Utilities/variables.scss";
 .btn {
-    background: #ffffff;
-    border: 2px solid $darkGreen;
-    border-radius: 6px;
-    padding: 10px 15px;
-    color: $darkGreen;
-    text-transform: uppercase;
-    font-family: "FuturaPTBold";
+  background: #ffffff;
+  border: 2px solid $darkGreen;
+  border-radius: 6px;
+  padding: 10px 15px;
+  color: $darkGreen;
+  text-transform: uppercase;
+  font-family: "FuturaPTBold";
+  &:hover{
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 600px) {
+  .btn {
+    font-size: 24px;
+    border: 3px solid #005b26;
+    border-radius: 10px;
+    padding: 10px 25px;
+  }
 }
