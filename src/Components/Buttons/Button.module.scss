@@ -1,6 +1,6 @@
 @import "../../Utilities/variables.scss";
 
-.btn {
+@mixin button-style {
   background: #ffffff;
   border: 2px solid $darkGreen;
   border-radius: 6px;
@@ -11,44 +11,33 @@
   &:hover {
     cursor: pointer;
   }
+}
 
-  &__hideOnDesktop {
-    background: #ffffff;
-    border: 2px solid $darkGreen;
-    border-radius: 6px;
-    padding: 10px 15px;
-    color: $darkGreen;
-    text-transform: uppercase;
-    font-family: "FuturaPTBold";
-    &:hover {
-      cursor: pointer;
-    }
-    @media screen and (min-width: 1024px) {
-      display: none;
-    }
-  }
+.btn {
+  @include button-style;
 
   &__showOnDesktop {
-    background: #ffffff;
-    border: 2px solid $darkGreen;
-    border-radius: 6px;
-    padding: 10px 15px;
+    @include button-style;
     margin: 20px 0;
-    color: $darkGreen;
-    text-transform: uppercase;
-    font-family: "FuturaPTBold";
-    &:hover {
-      cursor: pointer;
-    }
-    display: none;
     align-self: flex-end;
     justify-self: center;
+    display: none;
 
     @media screen and (min-width: 1024px) {
       display: block;
     }
   }
+
+  &__hideOnDesktop {
+    @include button-style;
+    display: block;
+
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
+  }
 }
+
 .transparent {
   background: transparent;
 }
@@ -57,6 +46,7 @@
   font-size: 16px;
   padding: 8px 10px;
 }
+
 @media screen and (min-width: 600px) {
   .btn {
     font-size: 24px;
