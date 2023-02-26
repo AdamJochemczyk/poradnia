@@ -56,7 +56,45 @@
   }
 }
 
+.mobileAndOnlineDiets {
+    display: grid;
+    align-items: end;
+    justify-items: row;
+    direction: rtl;
+    grid-template-columns: 1fr 1fr;
+    gap: 160px;
+    margin-left: 225px;
+    margin-top: 16px;
+
+    &__innerContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__pictureContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__paragraph {
+        color: $pink;
+        font-family: "FuturaPTBold";
+        font-size: clamp(16px, 2vw, 32px);
+        word-wrap: break-word;
+        text-align: center;
+    }
+}
+
 @media screen and (min-width: 900px) {
+  .mobileAndOnlineDietsSection {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        align-items: center;
+    }
+
   .container {
     align-items: start;
     &::before {

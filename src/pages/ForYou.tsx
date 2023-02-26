@@ -7,9 +7,22 @@ import { PointWithText } from "src/Components/PointWithText/PointWithText";
 import { PreparationBoxes } from "src/Components/Organisms/PreparationBoxes/PreparationBoxes";
 import styles from "./ForYou.module.scss";
 import pomarancza from "src/assets/Graphics/GosiaPomarancza.png";
+//@ts-ignore
+import { HashLink } from "react-router-hash-link";
+import { useLocation } from "react-router";
+import { Footer } from "src/Components/Footer/Footer";
 
 export const ForYou = () => {
-  //TODO: formularz kontaktowy link
+
+   const scrollWithOffset = (el: any, offset: number) => {
+     const elementPosition = el.offsetTop - offset;
+     window.scroll({
+       top: elementPosition,
+       left: 0,
+       behavior: "smooth",
+     });
+   };
+const { pathname } = useLocation();
   return (
     <>
       <Navigation />
@@ -26,8 +39,15 @@ export const ForYou = () => {
               primaryText="Umów się na konsultację dietetyczną"
               secondaryText={
                 <>
-                  poprzez <a href="#">formularz kontaktowy</a> lub{" "}
-                  <a href="tel:+48799288583">telefonicznie.</a>
+                  poprzez{" "}
+                  <HashLink
+                    smooth
+                    scroll={(el: any) => scrollWithOffset(el, 150)}
+                    to={`${pathname}#contact`}
+                  >
+                    formularz kontaktowy
+                  </HashLink>{" "}
+                  lub <a href="tel:+48799288583">telefonicznie.</a>
                 </>
               }
             />
@@ -68,7 +88,7 @@ export const ForYou = () => {
           <div className={`${styles.pointWithPhoto} ${styles.point6}`}>
             <PointWithText
               pointNumber={6}
-              primaryText="konultacja kontrolna"
+              primaryText="konsultacja kontrolna"
               secondaryText="Odbywa się w zależności od Twoich potrzeb co 2-3 tygodnie po rozpoczęciu stosowania jadłospisu. Na takiej wizycie omawiamy postępy 
 dietoterapii, oraz przy wystąpieniu trudności, omawiamy je i rozwiązujemy. Kontynuujemy również edukację żywieniową."
               wider
@@ -94,6 +114,7 @@ dietoterapii, oraz przy wystąpieniu trudności, omawiamy je i rozwiązujemy. Ko
           />
         </section>
       </article>
+      <Footer />
     </>
   );
 };
