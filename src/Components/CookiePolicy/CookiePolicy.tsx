@@ -7,12 +7,15 @@ export const CookiePolicy = () => {
     const [isCookieSet,setIsCookieSet]=useState(false)
     useEffect(() => {
       const cookie=getCookie("allow")
-      console.log(cookie)
-      setIsCookieSet(false);
+      setIsCookieSet(Boolean(cookie));
     }, [])
 
     const cookiesAction=(isAccept:boolean)=>{
-      setCookie("allow",isAccept ? "yes" : "no",30);
+      if(isAccept){
+        setCookie("allow","yes",30);
+      }else{
+        setIsCookieSet(true);
+      }
     }
     
   return !isCookieSet ? (

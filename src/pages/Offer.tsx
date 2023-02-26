@@ -26,6 +26,7 @@ import {
   UnorderedListItem,
   MobileAndOnlineDiets,
 } from "src/Components/OfferPage";
+import { Footer } from "src/Components/Footer/Footer";
 
 export const Offer = () => {
   const [isWide, setIsWide] = useState(window.innerWidth < 768);
@@ -243,6 +244,7 @@ export const Offer = () => {
           <BoxesOffer />
         </section>
       </Article>
+      <Footer />
     </>
   );
 };
