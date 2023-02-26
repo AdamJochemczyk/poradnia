@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "../Buttons/Button";
 import { PointWithText } from "../PointWithText/PointWithText";
 import style from "./WhenHelp.module.scss";
@@ -70,9 +71,9 @@ export const WhenHelp = () => {
             dietetyczną
           </p>
           <div className={style.center}>
-            <a href="">
+            <Link to="/oferta">
               <Button text="Oferta" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

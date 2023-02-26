@@ -11,6 +11,13 @@
     cursor: pointer;
   }
 }
+.transparent{
+  background: transparent;
+}
+.small{
+  font-size: 16px;
+  padding: 8px 10px;
+}
 @media screen and (min-width: 600px) {
   .btn {
     font-size: 24px;
@@ -18,4 +25,8 @@
     border-radius: 10px;
     padding: 10px 25px;
   }
+  .small{
+  font-size: 16px;
+  padding: 10px 12px;
+}
 }

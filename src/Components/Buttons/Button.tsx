@@ -1,5 +1,20 @@
 import style from "./Button.module.scss";
 
-export const Button = ({ text }: { text: string }) => {
-    return <button className={style.btn}>{text}</button>;
+interface ButtonProps {
+  text: string;
+  handleClick?: () => void;
+  transparent?: boolean;
+  small?: boolean;
+}
+export const Button = ({ text, handleClick, transparent,small }: ButtonProps) => {
+  return (
+    <button
+      onClick={handleClick}
+      className={`${style.btn} ${transparent ? style.transparent : ""} ${
+        small ? style.small : ""
+      }`}
+    >
+      {text}
+    </button>
+  );
 };

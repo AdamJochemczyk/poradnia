@@ -75,7 +75,7 @@ export const PreparationBoxes = () => {
                         </li>
                         <li>
                             Wydrukuj kartę, uzupełnij swoje dane i zaznacz "
-                            <span className={styles.bolder}>X</span>"" przy badaniach, które chcesz
+                            <span className={styles.bolder}>X</span>" przy badaniach, które chcesz
                             wykonać
                         </li>
                         <li>
