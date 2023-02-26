@@ -15,8 +15,8 @@ import badajto from "../../assets/Graphics/badajto.png";
 // TODO: links
 export const Footer = () => {
   return (
-    <footer className={style.container}>
-      <section className={style.newsletter} id="#newsletter">
+    <footer className={style.container} id="newsletter">
+      <section className={style.newsletter}>
         <div>
           <p>
             Chcesz zobaczyć przykładowy jadłospis lub chcesz być na bieżąco?
@@ -45,7 +45,7 @@ export const Footer = () => {
           </form>
         </div>
       </section>
-      <section className={style.contactFormSection}>
+      <section className={style.contactFormSection} id="contact">
         <div>
           <p className={style.contactFormHeader}>
             Chesz ze mną współpracować?

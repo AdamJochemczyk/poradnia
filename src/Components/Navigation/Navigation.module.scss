@@ -27,6 +27,9 @@
             cursor: pointer;
         }
     }
+    &__option_active {
+        font-family: 'FuturaPTBold', sans-serif;
+    }
 
     &__links {
         display: flex;
@@ -72,13 +75,14 @@
     position: sticky;
     top: 0;
     padding: 20px;
-    min-height: 100px;
+    min-height: 150px;
     background: linear-gradient(180deg, #FF9B4D 23.44%, #FFFFFF 100%);
     @include flexB;
     z-index: 10;
 
     &__logo {
         width: clamp(190px, 40%, 416px);
+        height: 98px;
 
         img {
             width: 100%;

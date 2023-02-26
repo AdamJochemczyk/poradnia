@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import styles from "./Navigation.module.scss";
 import photo from "../../assets/Photos/logoZielone.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 //@ts-ignore
 import { HashLink } from "react-router-hash-link";
+import { CookiePolicy } from "../CookiePolicy/CookiePolicy";
 
 export const MenuToggled = ({ closeAction }: { closeAction: () => void }) => {
   return (
@@ -13,8 +14,12 @@ export const MenuToggled = ({ closeAction }: { closeAction: () => void }) => {
         <Link to="/oferta" className={styles.menu__option}>
           OFERTA
         </Link>
-        <Link to="/dla-ciebie" className={styles.menu__option}>DLA CIEBIE</Link>
-        <HashLink smooth to="/#newsletter" className={styles.menu__option}>ZAPISZ SIĘ</HashLink>
+        <Link to="/dla-ciebie" className={styles.menu__option}>
+          DLA CIEBIE
+        </Link>
+        <HashLink smooth to="/#newsletter" className={styles.menu__option}>
+          ZAPISZ SIĘ
+        </HashLink>
         <a href="tel:+48799288583" className={styles.menu__option}>
           <div>KONTAKT</div>
           <div>799 288 583</div>
@@ -51,8 +56,19 @@ export const Navigation = () => {
     };
   }, []);
 
+  const {pathname} = useLocation();
+
+  const scrollWithOffset = (el:any, offset:number) => {
+  const elementPosition = el.offsetTop - offset;
+  window.scroll({
+    top: elementPosition,
+    left: 0,
+    behavior: "smooth"
+  });}
+
   return (
     <>
+      <CookiePolicy />
       <nav className={styles.navbar}>
         <div className={styles.navbar__logo}>
           {showLogo ? <img src={photo} alt="Logo" /> : null}
@@ -63,13 +79,30 @@ export const Navigation = () => {
           <div className={styles.handle__element}></div>
         </div>
         <div className={styles.links__wide}>
-          <Link to="/oferta" className={styles.menu__option}>
+          <Link
+            to="/oferta"
+            className={`${
+              pathname.includes("/oferta") ? styles.menu__option_active : ""
+            } ${styles.menu__option}`}
+          >
             OFERTA
           </Link>
-          <Link to="/dla-ciebie" className={styles.menu__option}>
+          <Link
+            to="/dla-ciebie"
+            className={`${
+              pathname.includes("/dla-ciebie") ? styles.menu__option_active : ""
+            } ${styles.menu__option}`}
+          >
             DLA CIEBIE
           </Link>
-          <p className={styles.menu__option}>ZAPISZ SIĘ</p>
+          <HashLink
+            smooth
+            to={`${pathname}#newsletter`}
+            scroll={(el: any) => scrollWithOffset(el, 150)}
+            className={styles.menu__option}
+          >
+            ZAPISZ SIĘ
+          </HashLink>
           <a href="tel:+48799288583" className={styles.menu__option}>
             <div>KONTAKT</div>
             <div>799 288 583</div>

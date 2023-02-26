@@ -2,6 +2,7 @@
 
 .container {
   margin-top: 10px;
+  position: relative;
 }
 .newsletter {
   font-size: 14px;
@@ -47,9 +48,6 @@
     justify-content: flex-end;
     margin-top: 15px;
   }
-}
-.contactFormSection {
-  display: none;
 }
 .contact {
   background: linear-gradient(180deg, rgba(255, 155, 77, 0) 0%, #ff9b4d 100%);
@@ -198,9 +196,11 @@
     right: 2%;
   }
   .logos {
+    gap: 60px;
     justify-content: start;
     img {
       height: 50px;
+      z-index: 1;
     }
   }
 }
