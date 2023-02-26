@@ -1,0 +1,10 @@
+export { Article } from "./Article/Article";
+export { Container } from "./Container/Container";
+export { TextContainer } from "./TextContainer/TextContainer";
+export { MinorHeader } from "./MinorHeader/MinorHeader";
+export { Paragraph } from "./Paragraph/Paragraph";
+export { MobileAndOnlineDiets } from "./MobileAndOnlineDiets/MobileAndOnlineDiets";
+export { BoxOffer } from "./BoxOffer/BoxOffer";
+export { BoxesOffer } from "./BoxOffer/BoxesOffer/BoxesOffer";
+export { UnorderedList } from "./BoxOffer/UnorderedList/UnorderedList";
+export { UnorderedListItem } from "./BoxOffer/UnorderedListItem/UnorderedListItem";

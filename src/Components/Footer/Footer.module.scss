@@ -153,52 +153,53 @@
         color: $pink;
       }
     }
-    &_area{
+    &_area {
       resize: vertical;
       min-height: 210px;
       width: 433px;
     }
   }
-  .contact{
+  .contact {
     padding: 0 2.5%;
     padding-top: 100px;
-    .links{
+    .links {
       display: flex;
       justify-content: space-between;
       width: 80%;
     }
-    .socials_icons{
+    .socials_icons {
       display: flex;
     }
     &_icon_cont {
       font-size: 25px;
     }
-    &_icon{
+    &_icon {
       width: 29px;
       height: 29px;
     }
-    &_insta{
+    &_insta {
       width: 58px;
       height: 58px;
     }
-    &_fb{
+    &_fb {
       width: 29px;
       height: 53px;
     }
   }
-  .socials_icons{
+  .socials_icons {
     gap: 80px;
     flex-direction: row-reverse;
   }
-  .fork{
+  .fork {
     position: absolute;
     bottom: 0;
     right: 2%;
   }
-  .logos{
+
+  .logos {
     gap: 60px;
     justify-content: start;
-    img{
+    img {
       height: 50px;
       z-index: 1;
     }

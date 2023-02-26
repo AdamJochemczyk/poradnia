@@ -1,0 +1,55 @@
+@import "../../../Utilities//variables.scss";
+
+.boxOffer {
+  display: grid;
+  background: linear-gradient(
+    180deg,
+    rgba(243, 155, 155, 0.54) 30.79%,
+    rgba(255, 255, 255, 0.52) 130.79%
+  );
+  border: 2px solid #f39b9b;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  padding: 10px 3px 10px 10px;
+  color: $darkGreen;
+  margin-top: 12px;
+
+  @media screen and (min-width: 1024px) {
+    padding: 18px 22px;
+    margin-top: 18px;
+    gap: 10px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 36px 44px;
+    margin-top: 24px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    border-width: 8px;
+  }
+
+  &__title {
+    font-family: "FuturaPTBold";
+    font-size: clamp(12px, 1.8vw, 24px);
+
+    &__small {
+      font-family: "FuturaPTBold";
+      font-size: clamp(8px, 1.4vw, 20px);
+    }
+  }
+
+  &__innerContainer {
+    display: flex;
+    padding-right: 10px;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__paragraph {
+    font-family: "FuturaPTBold";
+    font-size: clamp(8px, 1.4vw, 20px);
+    line-height: 13px;
+    color: $darkGreen;
+  }
+}

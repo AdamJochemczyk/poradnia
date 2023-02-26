@@ -1,0 +1,65 @@
+@import "../../../../Utilities/variables.scss";
+
+.boxesOfferMainContainer {
+  @media screen and (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px 60px;
+    justify-items: center;
+  }
+}
+
+.boxOfferPackages {
+  display: grid;
+  background: linear-gradient(
+    180deg,
+    rgba(243, 155, 155, 0.54) 30.79%,
+    rgba(255, 255, 255, 0.52) 130.79%
+  );
+  border: 2px solid #f39b9b;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  padding: 10px 3px 10px 10px;
+  color: $darkGreen;
+  margin-top: 10px;
+
+  @media screen and (min-width: 1024px) {
+    padding: 18px 22px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 36px 44px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    max-width: 450px;
+    padding: 36px 66px;
+    border-width: 8px;
+  }
+
+  &__title {
+    font-family: "Futura PT";
+    font-size: clamp(12px, 1.8vw, 32px);
+
+    span {
+      text-decoration: line-through;
+      text-decoration-thickness: 2px;
+    }
+    &__large {
+      font-family: "FuturaPTBold";
+      font-size: clamp(12px, 1.8vw, 32px);
+    }
+  }
+
+  &__withButton {
+    display: flex;
+    padding-right: 10px;
+    justify-content: space-between;
+
+    @media screen and (min-width: 1024px) {
+      padding-right: 0;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+}

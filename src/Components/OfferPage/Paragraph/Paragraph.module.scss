@@ -1,0 +1,35 @@
+@import "../../../Utilities//variables.scss";
+
+.description {
+  color: $darkGreen;
+  font-family: "Futura PT";
+  font-size: clamp(11px, 1.6vw, 24px);
+  font-weight: 800;
+  margin-top: 8px;
+
+  span {
+    font-family: "FuturaPTExtraBold";
+    color: $darkGreen;
+  }
+
+  &__small,
+  &__smallPackages {
+    color: $darkGreen;
+    font-family: "Futura PT";
+    font-size: clamp(9px, 1.6vw, 20px);
+    font-weight: 800;
+    margin-top: 8px;
+
+    span {
+      font-family: "FuturaPTExtraBold";
+      color: $darkGreen;
+    }
+  }
+
+  &__smallPackages {
+    @media screen and (min-width: 1024px) {
+      text-align: center;
+      margin: 22px 0;
+    }
+  }
+}
