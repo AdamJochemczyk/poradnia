@@ -1,4 +1,5 @@
 @import "../../Utilities/variables.scss";
+
 .btn {
   background: #ffffff;
   border: 2px solid $darkGreen;
@@ -7,10 +8,48 @@
   color: $darkGreen;
   text-transform: uppercase;
   font-family: "FuturaPTBold";
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
+
+  &__hideOnDesktop {
+    background: #ffffff;
+    border: 2px solid $darkGreen;
+    border-radius: 6px;
+    padding: 10px 15px;
+    color: $darkGreen;
+    text-transform: uppercase;
+    font-family: "FuturaPTBold";
+    &:hover {
+      cursor: pointer;
+    }
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &__showOnDesktop {
+    background: #ffffff;
+    border: 2px solid $darkGreen;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin: 20px 0;
+    color: $darkGreen;
+    text-transform: uppercase;
+    font-family: "FuturaPTBold";
+    &:hover {
+      cursor: pointer;
+    }
+    display: none;
+    align-self: flex-end;
+    justify-self: center;
+
+    @media screen and (min-width: 1024px) {
+      display: block;
+    }
+  }
 }
+
 @media screen and (min-width: 600px) {
   .btn {
     font-size: 24px;

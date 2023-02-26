@@ -1,0 +1,16 @@
+@import "../../../Utilities//variables.scss";
+
+.header {
+    font-size: clamp(20px, 2vw, 48px);
+    font-family: "FuturaPTBold";
+    color: $pink;
+    margin: 32px 0 6px 0;
+    text-transform: uppercase;
+
+    &__green {
+        font-size: clamp(14px, 2vw, 24px);
+        color: $darkGreen;
+        font-family: "FuturaPTBold";
+        text-transform: uppercase;
+    }
+}

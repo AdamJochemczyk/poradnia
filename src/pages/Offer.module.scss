@@ -1,245 +1,135 @@
 @import "../Utilities/variables.scss";
 
-.wrapper {
-    margin: 0 20px 20px;
+@media screen and (min-width: 768px) {
+  .startNowSection {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  .bowlImage {
+    padding-right: 24px;
+  }
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+.fruitsImage {
+  display: none;
+  @media screen and (min-width: 1920px) {
+    display: block;
+    margin: 60px -80px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .mobileAndOnlineDietsSection {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        align-items: center;
-    }
-
-    .bowlImage {
-        padding-right: 24px;
-    }
-}
-
-// .fruitsImage {
-//     margin: 0 -20px;
-//     width: 100%;
-// }
-
-@media screen and (min-width: 1024px) {
-    .potOfVegetablesSection {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        grid-template-rows: 1fr;
-        gap: 12px 12px;
-        justify-items: center;
-        align-items: center;
-    }
+  .offerSection {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 12px 12px;
+    align-items: center;
+  }
 }
 
 .potOfVegetables {
-    @media screen and (min-width: 1024px) {
-        display: none;
-    }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .potOfVegetablesLarge {
-    display: none;
-    @media screen and (min-width: 1024px) {
-        display: block;
+  display: none;
+  justify-self: center;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 90%;
+  }
+}
+
+.examinationSection {
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 0.2fr 0.3fr 0.8fr 1fr;
+    gap: 10px 40px;
+    grid-auto-flow: row;
+    align-items: end;
+    grid-template-areas:
+      "iA iA iA iA iA ."
+      "tA tA tA pI tCOE tCOE"
+      "BIA BIA BIA pI tCOE tCOE"
+      "pFME pFME pFME con con .";
+
+    @media screen and (min-width: 1920px) {
+      margin-top: 40px;
+      grid-template-columns: 1fr 0.5fr 0.4fr 1fr 1fr;
+      grid-template-rows: 0.2fr 0.2fr 0.4fr 0.5fr 0.5fr;
+      grid-template-areas:
+        "iA iA iA pI ."
+        "tA tA . pI ."
+        "BIA BIA . pI tCOE"
+        "pFME pFME con con tCOE"
+        "pFME pFME con con .";
+    }
+
+    // iA = individualApproach
+    // tA = tanitaAnalyzer
+    // pI = personImage
+    // tCOE = theCourseOfExamination
+    // BIA = biaMethod
+    // pFME = preparationForMedicalExamination
+    // con = contraindications
+  }
+
+  .individualApproach {
+    grid-area: iA;
+  }
+
+  .tanitaAnalyzer {
+    grid-area: tA;
+  }
+
+  .personImageContainer {
+    grid-area: pI;
+
+    @media screen and (min-width: 1920px) {
+      justify-self: center;
+      align-self: baseline;
+    }
+  }
+
+  .personImage {
+    @media screen and (min-width: 425px) {
+      margin-top: 15px;
+      max-width: 80%;
+    }
+
+    @media screen and (min-width: 768px) {
+      max-width: 125%;
     }
     @media screen and (min-width: 1440px) {
-        width: 90%;
+      max-width: 100%;
     }
-}
+  }
 
-.description {
-    color: $darkGreen;
-    font-family: "Futura PT";
-    font-size: clamp(11px, 2vw, 24px);
-    font-weight: 800;
-    margin-top: 8px;
-
-    span {
-        font-family: "FuturaPTExtraBold";
-        color: $darkGreen;
+  .theCourseOfExamination {
+    grid-area: tCOE;
+    @media screen and (min-width: 1920px) {
+      align-self: baseline;
     }
+  }
 
-    &__small {
-        color: $darkGreen;
-        font-family: "Futura PT";
-        font-size: clamp(9px, 2vw, 20px);
-        font-weight: 800;
-        margin-top: 8px;
+  .biaMethod {
+    grid-area: BIA;
+  }
 
-        span {
-            font-family: "FuturaPTExtraBold";
-            color: $darkGreen;
-        }
-    }
-}
+  .preparationForMedicalExamination {
+    grid-area: pFME;
+  }
 
-.mobileAndOnlineDiets {
-    display: grid;
-    align-items: end;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 16px;
-
-    &__innerContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    &__pictureContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    &__paragraph {
-        color: $pink;
-        font-family: "Futura PT";
-        font-weight: 700;
-        font-size: clamp(16px, 2vw, 32px);
-        word-wrap: break-word;
-        text-align: center;
-    }
-}
-
-.header {
-    font-size: clamp(20px, 2vw, 48px);
-    font-family: "FuturaPTBold";
-    color: $pink;
-    margin: 32px 0 6px 0;
-    text-transform: uppercase;
-
-    &__green {
-        font-size: clamp(14px, 2vw, 24px);
-        color: $darkGreen;
-        font-family: "FuturaPTBold";
-        text-transform: uppercase;
-    }
-}
-
-.boxContainer {
-    margin-top: 20px;
-}
-
-.boxOffer {
-    background: linear-gradient(
-        180deg,
-        rgba(243, 155, 155, 0.54) 30.79%,
-        rgba(255, 255, 255, 0.52) 130.79%
-    );
-    border: 2px solid #f39b9b;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 7px;
-    padding: 10px 3px 10px 10px;
-    color: $darkGreen;
-    margin-top: 10px;
-
-    &__title {
-        font-family: "FuturaPTBold";
-        font-size: clamp(12px, 1.8vw, 24px);
-
-        &__normal {
-            font-family: "Futura PT";
-            font-size: clamp(12px, 2vw, 32px);
-
-            span {
-                text-decoration: line-through;
-                text-decoration-thickness: 2px;
-            }
-        }
-
-        &__small {
-            font-family: "FuturaPTBold";
-            font-size: clamp(8px, 1.8vw, 20px);
-        }
-    }
-
-    &__innerContainer {
-        display: flex;
-        padding-right: 10px;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-
-    &__withButton {
-        display: flex;
-        padding-right: 10px;
-        justify-content: space-between;
-    }
-
-    &__list {
-        padding: 6px 18px 0px;
-
-        %list-item {
-            font-family: "Futura PT";
-            font-weight: 600;
-            font-size: clamp(9px, 1.8vw, 20px);
-            color: $darkGreen;
-        }
-
-        %list-item-dash {
-            @extend %list-item;
-            font-family: "FuturaPTBold";
-            font-size: clamp(8px, 1.8vw, 20px);
-            list-style-type: none;
-            text-indent: -5px;
-            &:before {
-                content: "-";
-                position: absolute;
-                margin-left: -3px;
-            }
-        }
-
-        &__item {
-            @extend %list-item;
-        }
-
-        &__itemDash {
-            @extend %list-item-dash;
-        }
-
-        &__spacedItem {
-            @extend %list-item;
-            padding: 6px 0px;
-        }
-    }
-
-    &__paragraph {
-        font-family: "FuturaPTBold";
-        font-size: clamp(8px, 1.8vw, 20px);
-        line-height: 13px;
-        color: $darkGreen;
-    }
-}
-
-.textContainer {
-    max-width: 100%;
-    margin-top: 24px;
-    text-align: justify;
-
-    &__almostHalfScreen {
-        max-width: 65%;
-        margin-top: 24px;
-        text-align: justify;
-    }
-
-    &__withBottomMargin {
-        max-width: 100%;
-        margin-bottom: 24px;
-        text-align: justify;
-    }
-
-    &__halfScreen {
-        max-width: 50%;
-    }
+  .contraindications {
+    grid-area: con;
+  }
 }

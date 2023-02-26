@@ -1,0 +1,31 @@
+@import "../../../Utilities//variables.scss";
+
+.mobileAndOnlineDiets {
+  display: grid;
+  align-items: end;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 16px;
+
+  &__innerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__pictureContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__paragraph {
+    color: $pink;
+    font-family: "Futura PT";
+    font-weight: 700;
+    font-size: clamp(16px, 1.8vw, 32px);
+    word-wrap: break-word;
+    text-align: center;
+  }
+}

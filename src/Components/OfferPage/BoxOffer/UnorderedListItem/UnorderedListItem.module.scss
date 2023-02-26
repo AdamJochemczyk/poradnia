@@ -1,0 +1,26 @@
+@import "../../../../Utilities/variables.scss";
+
+.item,
+.itemDash,
+.spacedItem {
+  font-family: "Futura PT";
+  font-weight: 600;
+  font-size: clamp(9px, 1.4vw, 20px);
+  color: $darkGreen;
+
+  &.itemDash {
+    font-family: "FuturaPTBold";
+    font-size: clamp(8px, 1.4vw, 20px);
+    list-style-type: none;
+    text-indent: -5px;
+    &:before {
+      content: "-";
+      position: absolute;
+      margin-left: -3px;
+    }
+  }
+
+  &.spacedItem {
+    padding: 6px 0px;
+  }
+}
