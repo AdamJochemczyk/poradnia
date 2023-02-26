@@ -66,7 +66,7 @@ export const OFFER_DATA = [
     {
         title: "DRUGA KONSULTACJA DIETETYCZNA 150 ZŁ",
         listText: [
-            "Omówienie przygotowanego planu żywieniowego wraz z listTextą zakupów",
+            "Omówienie przygotowanego planu żywieniowego wraz z listą zakupów",
             "Edukacja żywieniowa",
         ],
     },

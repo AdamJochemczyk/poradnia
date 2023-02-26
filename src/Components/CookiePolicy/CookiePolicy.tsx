@@ -1,23 +1,22 @@
-import style from "./CookiePolicy.module.scss"
-import {Button} from "../Buttons/Button"
-import { useEffect, useState } from "react"
-import { getCookie, setCookie } from "src/Utilities/cookies"
+import style from "./CookiePolicy.module.scss";
+import { Button } from "../Buttons/Button";
+import { useEffect, useState } from "react";
+import { getCookie, setCookie } from "src/Utilities/cookies";
 
 export const CookiePolicy = () => {
-    const [isCookieSet,setIsCookieSet]=useState(false)
-    useEffect(() => {
-      const cookie=getCookie("allow")
-      setIsCookieSet(Boolean(cookie));
-    }, [])
+  const [isCookieSet, setIsCookieSet] = useState(false);
+  useEffect(() => {
+    const cookie = getCookie("allow");
+    setIsCookieSet(Boolean(cookie));
+  }, []);
 
-    const cookiesAction=(isAccept:boolean)=>{
-      if(isAccept){
-        setCookie("allow","yes",30);
-      }else{
-        setIsCookieSet(true);
-      }
+  const cookiesAction = (isAccept: boolean) => {
+    if (isAccept) {
+      setCookie("allow", "yes", 30);
     }
-    
+    setIsCookieSet(true);
+  };
+
   return !isCookieSet ? (
     <div className={style.cookie}>
       <h2>Dbamy o Twoją prywatność</h2>
@@ -54,4 +53,4 @@ export const CookiePolicy = () => {
   ) : (
     <></>
   );
-}
+};

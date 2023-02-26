@@ -41,7 +41,7 @@ export const WhenHelp = () => {
           <p className={style.box_primary}>
             Zaburzenia gospodarki węglowodanowej
           </p>
-          <p>np. cukrzycę typu 1 i 2, insulinoodporność</p>
+          <p>np. cukrzycę typu 1 i 2, insulinooporność</p>
         </div>
         <div className={`${style.box} ${style.box2}`}>
           <p className={style.box_primary}>Zaburzenia gospodarki lipidowej</p>
