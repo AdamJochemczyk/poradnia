@@ -34,20 +34,20 @@ export const CookiePolicy = () => {
         do informacji w plikach cookies?
       </p>
       <div className={style.buttons}>
-        <div className={style.no}>
-          <Button text="USTAWIENIA SZCZEGÓŁOWE" transparent small />
+        <div className={style.mobile}>
           <Button
             text="NIE ZGADZAM SIĘ"
             transparent
             small
             handleClick={() => cookiesAction(false)}
           />
+          <Button
+            text="AKCEPTUJ"
+            small
+            handleClick={() => cookiesAction(true)}
+          />
         </div>
-        <Button
-          text="ZGADZAM SIĘ"
-          small
-          handleClick={() => cookiesAction(true)}
-        />
+        <Button text="USTAWIENIA SZCZEGÓŁOWE" transparent small />
       </div>
     </div>
   ) : (
