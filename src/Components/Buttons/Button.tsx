@@ -3,9 +3,11 @@ import styles from "./Button.module.scss";
 interface ButtonProps {
   text: string;
   styleName?: "default" | "hideOnDesktop" | "showOnDesktop";
-  handleClick?: () => void;
+  handleClick?: (() => void) | ((e:any)=>void);
   transparent?: boolean;
   small?: boolean;
+  disabled?:boolean;
+  type?: "button" | "submit"
 }
 
 export const Button = ({
@@ -14,6 +16,8 @@ export const Button = ({
   transparent,
   small,
   handleClick,
+  disabled=false,
+  type="button"
 }: ButtonProps) => {
   const containerClass = {
     default: styles.btn,
@@ -27,6 +31,8 @@ export const Button = ({
       className={`${containerClass[styleName]} ${
         transparent ? styles.transparent : ""
       } ${small ? styles.small : ""}`}
+      disabled={disabled}
+      type={type}
     >
       {text}
     </button>

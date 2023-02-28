@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Button } from "../Buttons/Button";
 import style from "./Footer.module.scss";
 import phone from "../../assets/Graphics/phone.svg";
@@ -11,9 +12,55 @@ import Polska from "../../assets/Graphics/POLSKA.png";
 import unia from "../../assets/Graphics/unia.png";
 import sla from "../../assets/Graphics/sla.png";
 import badajto from "../../assets/Graphics/badajto.png";
+import { getCookie } from "src/Utilities/cookies";
+import {toast} from "react-toastify"
 
 // TODO: links
 export const Footer = () => {
+  const [isCookieAccepted, setIsCookieAccepted] = useState(false);
+  const cookie = getCookie("allow");
+  useEffect(() => {
+    setIsCookieAccepted(cookie.includes("yes"));
+  }, [cookie]);
+
+  const handleSubmitNewsletter = (e: any) => {
+    e.preventDefault();
+    const [name,email,checkbox]=e.target
+    if(!checkbox.checked){
+      toast.error("Wyraź zgodę na zapis do newslettera")
+      return;
+    }else if (
+      name.value !== "" &&
+      email.value.includes("@") &&
+      email.value.includes(".")
+    ) {
+      //TODO: send to mailerLite
+      toast.success("Dziękujemy za zapis do newslettera");
+    }else{
+      toast.error("Uzupełnij poprawnie pola i spróbuj jeszcze raz")
+    }
+  };
+
+   const handleSubmitContact = (e: any) => {
+     e.preventDefault();
+     const [nameAndSurname, phone, email, message, checkbox] = e.target;
+     if (!checkbox.checked) {
+       toast.error("Wyraź zgodę na przetwarzanie danych osobowych");
+       return;
+     } else if (
+       nameAndSurname.value !== "" &&
+       phone.value !== "" &&
+       email.value.includes("@") &&
+       email.value.includes(".") &&
+       message.value!==""
+     ) {
+       //TODO: send to mailerLite
+       toast.success("Dziękujemy za wiadomość odpowiemy najszybciej jak to możliwe");
+     } else {
+       toast.error("Uzupełnij poprawnie pola i spróbuj jeszcze raz");
+     };
+   };
+
   return (
     <footer className={style.container} id="newsletter">
       <section className={style.newsletter}>
@@ -24,7 +71,7 @@ export const Footer = () => {
           <p className={style.newsletter_title}>Zapisz się do newslettera!</p>
         </div>
         <div>
-          <form>
+          <form onSubmit={handleSubmitNewsletter}>
             <div className={style.newsletter_form_control}>
               <input className={style.newsletter_input} placeholder="Imię" />
             </div>
@@ -40,7 +87,11 @@ export const Footer = () => {
               Wyrażam zgodę na przetwarzanie danych osobowych
             </div>
             <div className={style.newsletter_send_cont}>
-              <Button text="wyślij" />
+              <Button
+                disabled={!isCookieAccepted}
+                text="wyślij"
+                type="submit"
+              />
             </div>
           </form>
         </div>
@@ -52,7 +103,7 @@ export const Footer = () => {
             <br />
             Skontaktuj się!
           </p>
-          <form className={style.contactForm}>
+          <form className={style.contactForm} onSubmit={handleSubmitContact}>
             <div>
               <input
                 className={style.contactForm_input}
@@ -83,25 +134,28 @@ export const Footer = () => {
               Wyrażam zgodę na przetwarzanie danych osobowych
             </div>
             <div className={style.newsletter_send_cont}>
-              <Button text="wyślij" />
+              <Button type="submit" disabled={isCookieAccepted} text="wyślij" />
             </div>
           </form>
         </div>
       </section>
       <section className={style.contact}>
         <div className={style.links}>
-          <div className={style.contact_icon_cont}>
+          <a href="tel:799288583" className={style.contact_icon_cont}>
             <img className={style.contact_icon} src={phone} alt="799 288 583" />{" "}
             799 288 583
-          </div>
-          <div className={style.contact_icon_cont}>
+          </a>
+          <a
+            href="mailto:kontakt@poradniadietetyczna.online"
+            className={style.contact_icon_cont}
+          >
             <img
               className={style.contact_icon}
               src={mail}
               alt="kontakt@poradniadietetyczna.online"
             />{" "}
             kontakt@poradniadietetyczna.online
-          </div>
+          </a>
           <div className={style.socials}>
             <div className={style.socials_icons}>
               <div>
