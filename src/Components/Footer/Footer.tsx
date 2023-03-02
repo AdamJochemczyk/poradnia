@@ -14,6 +14,7 @@ import sla from "../../assets/Graphics/sla.png";
 import badajto from "../../assets/Graphics/badajto.png";
 import { getCookie } from "src/Utilities/cookies";
 import {toast} from "react-toastify"
+import { addSubscriberToList } from "src/api/addSubscriberToList";
 
 // TODO: links
 export const Footer = () => {
@@ -23,7 +24,7 @@ export const Footer = () => {
     setIsCookieAccepted(cookie.includes("yes"));
   }, [cookie]);
 
-  const handleSubmitNewsletter = (e: any) => {
+  const handleSubmitNewsletter = async (e: any) => {
     e.preventDefault();
     const [name,email,checkbox]=e.target
     if(!checkbox.checked){
@@ -34,8 +35,16 @@ export const Footer = () => {
       email.value.includes("@") &&
       email.value.includes(".")
     ) {
-      //TODO: send to mailerLite
-      toast.success("Dziękujemy za zapis do newslettera");
+      try{
+        await addSubscriberToList(name.value,email.value);
+        toast.success("Dziękujemy za zapis do newslettera");
+        name.value=""
+        email.value=""
+        checkbox.checked=false
+      }catch(err){
+        console.log(err)
+        toast.error("Coś poszło nie tak")
+      }
     }else{
       toast.error("Uzupełnij poprawnie pola i spróbuj jeszcze raz")
     }
