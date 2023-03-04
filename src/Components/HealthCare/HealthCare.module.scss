@@ -13,9 +13,9 @@
 
   &::before {
     width: 100%;
-    height: 80%;
+    height: 75%;
     position: absolute;
-    top: 15%;
+    top: 10%;
     left: 0;
     content: "";
     background-image: url("../../assets/Photos/2.jpg");
@@ -57,43 +57,43 @@
 }
 
 .mobileAndOnlineDiets {
-    display: grid;
-    align-items: end;
-    justify-items: row;
-    direction: rtl;
-    grid-template-columns: 1fr 1fr;
-    gap: 160px;
-    margin-left: 225px;
-    margin-top: 16px;
+  display: grid;
+  align-items: end;
+  direction: rtl;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  z-index: 1;
 
-    &__innerContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
+  &__innerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
 
-    &__pictureContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  &__pictureContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    &__paragraph {
-        color: $pink;
-        font-family: "FuturaPTBold";
-        font-size: clamp(16px, 2vw, 32px);
-        word-wrap: break-word;
-        text-align: center;
-    }
+  &__paragraph {
+    color: $pink;
+    font-family: "FuturaPTBold";
+    font-size: clamp(16px, 2vw, 32px);
+    word-wrap: break-word;
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 900px) {
-  .mobileAndOnlineDietsSection {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        align-items: center;
-    }
+  .mobileAndOnlineDiets {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 160px;
+    margin-left: 225px;
+  }
 
   .container {
     align-items: start;
