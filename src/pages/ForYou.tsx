@@ -55,7 +55,7 @@ const { pathname } = useLocation();
           <div className={styles.point2}>
             <PointWithText
               pointNumber={2}
-              primaryText="wypełnij dzienniczek żywieniowy oraz formularz z wywiadem żywieniowym,"
+              primaryText="wypełnij dzienniczek żywieniowy oraz, formularz z wywiadem żywieniowym"
               secondaryText="które otrzymasz drogą mailową, gdy umówisz się na pierwszą wizytę i odeślij je do mnie"
             />
           </div>

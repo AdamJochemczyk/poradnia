@@ -12,10 +12,9 @@ function Introduce() {
           </p>
           <p>
             Nazywam się <span className={styles.bold}>Małgorzata Baron</span> i
-            jestem dyplomowanym dietetykiem klinicznym. Swoją wiedzę zdobyłam
+            jestem dyplomowanym dietetykiem klinicznym oraz edukatorką żywieniową. Swoją wiedzę zdobyłam
             studiując Dietetykę na Śląskim Uniwersytecie Medycznym w Katowicach
-            oraz uczestnicząc w wielu kursach i szkoleniach. Dietetykiem jestem
-            zarówno z wykształcenia jak i z zamiłowania.
+            oraz uczestnicząc w wielu kursach i szkoleniach.
           </p>
           <img
             src={gosia}
@@ -34,7 +33,7 @@ function Introduce() {
             Także osoby chore, dla których dietoterapia jest kluczowa w
             poprawieniu wyników i samopoczucia na co dzień, dzięki edukacji
             żywieniowej i regularnemu stosowaniu zasad zdrowego odżywiania
-            zmienią dietę w stałe nawyki
+            zmienią dietę w stałe nawyki.
           </p>
         </div>
         <div>

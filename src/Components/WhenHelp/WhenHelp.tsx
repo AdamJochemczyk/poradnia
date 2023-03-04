@@ -29,7 +29,7 @@ export const WhenHelp = () => {
         <div className={style.point3}>
           <PointWithText
             pointNumber={3}
-            primaryText={"Jeśli jesteś osobą chorą"}
+            primaryText={"Jeśli jesteś osobą chorą."}
             secondaryText={
               "Pomogę poprawić jakość Twojego życia, wyniki badań, a także odstawić leki, gdy jest to możliwe"
             }

@@ -80,16 +80,16 @@ export const PreparationBoxes = () => {
                         </li>
                         <li>
                             Z wypełnionym skierowaniem udaj się do najbliższego punktu Śląskich
-                            Laboratiriów Analitycznych lub punktu BadajTo
+                            Laboratiriów Analitycznych lub punktu Badaj.To
                         </li>
                         <li>
-                            Pokaż wypełnone skierowanie lub zdjęcie wypełnionego skierowania w
+                            Pokaż wypełnione skierowanie lub zdjęcie wypełnionego skierowania w
                             punkcie pobrań
                         </li>
                     </ul>
                 </div>
                 <div className={styles.help}>
-                    jeśli nie masz możliwości wydruku poproś mnie o pomoc
+                    jeśli nie masz możliwości wydruku, poproś mnie o pomoc
                 </div>
             </div>
         </section>

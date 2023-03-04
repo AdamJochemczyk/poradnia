@@ -21,7 +21,7 @@ export const CookiePolicy = () => {
     <div className={style.cookie}>
       <h2>Dbamy o Twoją prywatność</h2>
       <p>
-        Ta strona wykorzystuje pliki cookie w celu zapoewnienia prawidłowego
+        Ta strona wykorzystuje pliki cookie w celu zapewnienia prawidłowego
         działania poszczególnych jej funkcji (pliki cookies własne) oraz pliki
         cookies pochodzące od podmiotów trzecich w celu korzystania z narzędzi
         zewnętrznych (Google Analytics, MailerLite). Do tych informacji, które
@@ -42,7 +42,7 @@ export const CookiePolicy = () => {
             handleClick={() => cookiesAction(false)}
           />
           <Button
-            text="AKCEPTUJ"
+            text="ZGADZAM SIĘ"
             small
             handleClick={() => cookiesAction(true)}
           />

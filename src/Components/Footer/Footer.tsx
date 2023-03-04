@@ -13,8 +13,9 @@ import unia from "../../assets/Graphics/unia.png";
 import sla from "../../assets/Graphics/sla.png";
 import badajto from "../../assets/Graphics/badajto.png";
 import { getCookie } from "src/Utilities/cookies";
-import {toast} from "react-toastify"
+import { toast } from "react-toastify";
 import { addSubscriberToList } from "src/api/addSubscriberToList";
+import { sendEmail } from "src/api/sendEmailToCompany";
 
 // TODO: links
 export const Footer = () => {
@@ -26,49 +27,58 @@ export const Footer = () => {
 
   const handleSubmitNewsletter = async (e: any) => {
     e.preventDefault();
-    const [name,email,checkbox]=e.target
-    if(!checkbox.checked){
-      toast.error("Wyraź zgodę na zapis do newslettera")
+    const [name, email, checkbox] = e.target;
+    if (!checkbox.checked) {
+      toast.error("Wyraź zgodę na zapis do newslettera");
       return;
-    }else if (
+    } else if (
       name.value !== "" &&
       email.value.includes("@") &&
       email.value.includes(".")
     ) {
-      try{
-        await addSubscriberToList(name.value,email.value);
+      try {
+        await addSubscriberToList(name.value, email.value);
         toast.success("Dziękujemy za zapis do newslettera");
-        name.value=""
-        email.value=""
-        checkbox.checked=false
-      }catch(err){
-        console.log(err)
-        toast.error("Coś poszło nie tak")
+        name.value = "";
+        email.value = "";
+        checkbox.checked = false;
+      } catch (err) {
+        toast.error("Coś poszło nie tak");
       }
-    }else{
-      toast.error("Uzupełnij poprawnie pola i spróbuj jeszcze raz")
+    } else {
+      toast.error("Uzupełnij poprawnie pola i spróbuj jeszcze raz");
     }
   };
 
-   const handleSubmitContact = (e: any) => {
-     e.preventDefault();
-     const [nameAndSurname, phone, email, message, checkbox] = e.target;
-     if (!checkbox.checked) {
-       toast.error("Wyraź zgodę na przetwarzanie danych osobowych");
-       return;
-     } else if (
-       nameAndSurname.value !== "" &&
-       phone.value !== "" &&
-       email.value.includes("@") &&
-       email.value.includes(".") &&
-       message.value!==""
-     ) {
-       //TODO: send to mailerLite
-       toast.success("Dziękujemy za wiadomość odpowiemy najszybciej jak to możliwe");
-     } else {
-       toast.error("Uzupełnij poprawnie pola i spróbuj jeszcze raz");
-     };
-   };
+  const handleSubmitContact = async (e: any) => {
+    e.preventDefault();
+    const [nameAndSurname, phone, email, message, checkbox] = e.target;
+    if (!checkbox.checked) {
+      toast.error("Wyraź zgodę na przetwarzanie danych osobowych");
+      return;
+    } else if (
+      nameAndSurname.value !== "" &&
+      phone.value !== "" &&
+      email.value.includes("@") &&
+      email.value.includes(".") &&
+      message.value !== ""
+    ) {
+      try {
+        await sendEmail(nameAndSurname.value,phone.value,email.value,message.value);
+        toast.success(
+          "Dziękujemy za wiadomość odpowiemy najszybciej jak to możliwe"
+        );
+        nameAndSurname.value = "";
+        phone.value = "";
+        email.value = "";
+        message.value = "";
+      } catch (err) {
+        toast.error("Coś poszło nie tak");
+      }
+    } else {
+      toast.error("Uzupełnij poprawnie pola i spróbuj jeszcze raz");
+    }
+  };
 
   return (
     <footer className={style.container} id="newsletter">
@@ -143,7 +153,7 @@ export const Footer = () => {
               Wyrażam zgodę na przetwarzanie danych osobowych
             </div>
             <div className={style.newsletter_send_cont}>
-              <Button type="submit" disabled={isCookieAccepted} text="wyślij" />
+              <Button type="submit" disabled={false} text="wyślij" />
             </div>
           </form>
         </div>
