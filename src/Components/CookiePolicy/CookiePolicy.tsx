@@ -2,6 +2,7 @@ import style from "./CookiePolicy.module.scss";
 import { Button } from "../Buttons/Button";
 import { useEffect, useState } from "react";
 import { getCookie, setCookie } from "src/Utilities/cookies";
+import privacy from "src/assets/privacyPolicy.pdf";
 
 export const CookiePolicy = () => {
   const [isCookieSet, setIsCookieSet] = useState(false);
@@ -27,7 +28,7 @@ export const CookiePolicy = () => {
         zewnętrznych (Google Analytics, MailerLite). Do tych informacji, które
         są gromadzone w plikach cookies od podmiotów podmiotów trzecich, mają
         dostęp dostawcy wymienionych narzędzi zewnętrznych. Dowiedz się więcej:{" "}
-        <span>Polityka dotycząca cookie.</span>
+        <a href={privacy} target="_blank">Polityka dotycząca cookie.</a>
       </p>
       <p className={style.question}>
         Czy wyrażasz zgodę na przechowywanie informacji oraz ustawienie dostępu

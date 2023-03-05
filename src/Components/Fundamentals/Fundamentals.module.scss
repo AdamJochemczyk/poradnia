@@ -13,11 +13,11 @@
   }
 
   .content {
-    padding: 20px;
-
+    font-family: "FuturaPTBold";
     &__element {
       display: flex;
       align-items: center;
+      gap: 20px;
       background: linear-gradient(
         180deg,
         rgba(243, 155, 155, 0.54) 0%,
@@ -36,13 +36,12 @@
 
       .text {
         text-align: center;
-        width: 85%;
-        font-family: "FuturaPTMedium";
+        font-family: "FuturaPTBold";
         font-size: 0.85em;
         color: $darkGreen;
 
         .bold {
-          font-family: "FuturaPTBold";
+          font-family: "FuturaPTExtraBold";
         }
       }
     }
@@ -55,6 +54,7 @@
       font-size: 48px;
     }
     .content {
+      padding: 20px;
       display: flex;
       justify-content: center;
       &__desktop {
@@ -86,11 +86,11 @@
           grid-column: 5/7;
         }
 
-         &:nth-child(4) {
+        &:nth-child(4) {
           grid-column: 2/4;
         }
 
-         &:nth-child(5) {
+        &:nth-child(5) {
           grid-column: 4/6;
         }
 

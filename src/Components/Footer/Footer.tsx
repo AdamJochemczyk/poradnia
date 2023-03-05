@@ -12,18 +12,11 @@ import Polska from "../../assets/Graphics/POLSKA.png";
 import unia from "../../assets/Graphics/unia.png";
 import sla from "../../assets/Graphics/sla.png";
 import badajto from "../../assets/Graphics/badajto.png";
-import { getCookie } from "src/Utilities/cookies";
 import { toast } from "react-toastify";
 import { addSubscriberToList } from "src/api/addSubscriberToList";
 import { sendEmail } from "src/api/sendEmailToCompany";
 
-// TODO: links
 export const Footer = () => {
-  const [isCookieAccepted, setIsCookieAccepted] = useState(false);
-  const cookie = getCookie("allow");
-  useEffect(() => {
-    setIsCookieAccepted(cookie.includes("yes"));
-  }, [cookie]);
 
   const handleSubmitNewsletter = async (e: any) => {
     e.preventDefault();
@@ -64,7 +57,12 @@ export const Footer = () => {
       message.value !== ""
     ) {
       try {
-        await sendEmail(nameAndSurname.value,phone.value,email.value,message.value);
+        await sendEmail(
+          nameAndSurname.value,
+          phone.value,
+          email.value,
+          message.value
+        );
         toast.success(
           "Dziękujemy za wiadomość odpowiemy najszybciej jak to możliwe"
         );
@@ -107,7 +105,6 @@ export const Footer = () => {
             </div>
             <div className={style.newsletter_send_cont}>
               <Button
-                disabled={!isCookieAccepted}
                 text="wyślij"
                 type="submit"
               />
@@ -118,7 +115,7 @@ export const Footer = () => {
       <section className={style.contactFormSection} id="contact">
         <div>
           <p className={style.contactFormHeader}>
-            Chesz ze mną współpracować?
+            Chcesz ze mną współpracować?
             <br />
             Skontaktuj się!
           </p>
@@ -144,6 +141,7 @@ export const Footer = () => {
             </div>
             <div>
               <textarea
+                id="contactFormText"
                 className={`${style.contactForm_input} ${style.contactForm_area}`}
                 placeholder="Treść"
               />
@@ -177,22 +175,30 @@ export const Footer = () => {
           </a>
           <div className={style.socials}>
             <div className={style.socials_icons}>
-              <div>
+              <a
+                href="https://www.facebook.com/profile.php?id=100088199794512"
+                target="_blank"
+                rel="noreferrer"
+              >
                 {" "}
                 <img
                   className={style.contact_fb}
                   src={fb}
                   alt="kontakt@poradniadietetyczna.online"
                 />
-              </div>
-              <div>
+              </a>
+              <a
+                href="https://www.instagram.com/poradniadietetyczna.online"
+                target="_blank"
+                rel="noreferrer"
+              >
                 {" "}
                 <img
                   className={style.contact_insta}
                   src={insta}
                   alt="kontakt@poradniadietetyczna.online"
                 />
-              </div>
+              </a>
             </div>
             <picture className={style.fork}>
               <source srcSet={footerForkTop} media="(min-width: 800px)" />

@@ -43,7 +43,7 @@ const { pathname } = useLocation();
                   <HashLink
                     smooth
                     scroll={(el: any) => scrollWithOffset(el, 150)}
-                    to={`${pathname}#contact`}
+                    to={`${pathname}#newsletter`}
                   >
                     formularz kontaktowy
                   </HashLink>{" "}

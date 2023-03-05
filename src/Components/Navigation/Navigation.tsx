@@ -5,6 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 //@ts-ignore
 import { HashLink } from "react-router-hash-link";
 import { CookiePolicy } from "../CookiePolicy/CookiePolicy";
+import ScrollToTop from "src/Utilities/ScrollToTop";
 
 export const MenuToggled = ({ closeAction }: { closeAction: () => void }) => {
   return (
@@ -44,8 +45,6 @@ export const Navigation = () => {
       setShowLogo(true);
     } else if (window.scrollY > 350) {
       setShowLogo(true);
-    } else {
-      setShowLogo(false);
     }
   };
   useEffect(() => {
@@ -68,10 +67,15 @@ export const Navigation = () => {
 
   return (
     <>
+      <ScrollToTop />
       <CookiePolicy />
       <nav className={styles.navbar}>
         <div className={styles.navbar__logo}>
-          {showLogo ? <img src={photo} alt="Logo" /> : null}
+          {showLogo ? (
+            <Link to="/">
+              <img src={photo} alt="Logo" />
+            </Link>
+          ) : null}
         </div>
         <div className={styles.navbar__handle} onClick={handleClick}>
           <div className={styles.handle__element}></div>
