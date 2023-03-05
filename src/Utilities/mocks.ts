@@ -9,180 +9,185 @@ import grapefruit from "src/assets/Photos/grapefruit.png";
 import grapefruitLarge from "src/assets/Photos/grapefruitLarge.png";
 
 export const FUNDAMENTALS = [
-
-    {
-        title: "Ogólnodostępne i niedrogie produkty,",
-        description: "które znajdziesz w lokalnych sklepach.",
-        image: cart
-    },
-    {
-        title: "Ty mówisz co lubisz,",
-        description: " a ja mówię Ci jak i kiedy to jeść.",
-        image: fork
-    },
-    {
-        title: "Czas",
-        description: " przygotowania posiłków dostosowany do Ciebie.",
-        image: apple
-    },
-    {
-        title: "Indywidualnie dopasowana dieta,",
-        description: " na podstawie Twoich wyników badań szczegółowego wywiadu.",
-        image: stetoscope
-    },
-    {
-        title: "Wsparcie dietetyka,",
-        description: `nie tylko na wizytach kontrolnych. Jeśli tego potrzebujesz, możemy być w stałym kontakcie! `,
-        image: heart
-    },
+  {
+    title: "Ogólnodostępne i niedrogie produkty,",
+    description: "które znajdziesz w lokalnych sklepach.",
+    image: cart,
+  },
+  {
+    title: "Ty mówisz co lubisz,",
+    description: " a ja mówię Ci jak i kiedy to jeść.",
+    image: fork,
+  },
+  {
+    title: "Czas",
+    description: " przygotowania posiłków dostosowany do Ciebie.",
+    image: apple,
+  },
+  {
+    title: "Indywidualnie dopasowana dieta,",
+    description: " na podstawie Twoich wyników badań szczegółowego wywiadu.",
+    image: stetoscope,
+  },
+  {
+    title: "Wsparcie dietetyka,",
+    description: `nie tylko na wizytach kontrolnych. Jeśli tego potrzebujesz, możemy być w stałym kontakcie! `,
+    image: heart,
+  },
 ];
 
 export const MOBILE_AND_ONLINE_DIETS = [
-    {
-        src: carrot,
-        srcLarge: carrotLarge,
-        alt: "carrot",
-        text: "DIETETYK MOBILNY",
-    },
-    {
-        src: grapefruit,
-        srcLarge: grapefruitLarge,
-        alt: "grapefruit",
-        text: "DIETETYK ONLINE",
-    },
+  {
+    src: carrot,
+    srcLarge: carrotLarge,
+    alt: "carrot",
+    text: "DIETETYK MOBILNY",
+  },
+  {
+    src: grapefruit,
+    srcLarge: grapefruitLarge,
+    alt: "grapefruit",
+    text: "DIETETYK ONLINE",
+  },
 ];
 
 export const OFFER_DATA = [
-    {
-        title: "PIERWSZA KONSULTACJA DIETETYCZNA 120 ZŁ",
-        listText: [
-            "Omówienie wywiadu żywieniowego oraz wywiadu dotyczącego stylu życia",
-            "Omówienie wyników badań",
-            "Wstępna diagnoza i omówienie problemu",
-            "Wyznaczenie celu i kierunku dalszej współpracy",
-            "Wsparcie i motywację",
-        ],
-    },
-    {
-        title: "DRUGA KONSULTACJA DIETETYCZNA 150 ZŁ",
-        listText: [
-            "Omówienie przygotowanego planu żywieniowego wraz z listą zakupów",
-            "Edukacja żywieniowa",
-        ],
-    },
-    {
-        title: "KONSULTACJA KONTROLNA 80 ZŁ",
-        listText: [
-            "Analiza postępów dietoterapii",
-            "Przy wystąpieniu trudności, omówienie ich i zaproponowanie rozwiązania",
-            "Kontynuacja edukacji żywieniowej",
-        ],
-    },
-    {
-        title: "Konsultacja kontrolna z nowym planem żywieniowym",
-        price: "150 ZŁ",
-    },
-    {
-        title: "Dodatkowy indywidualny jadłospis 7-dniowy",
-        price: "150 ZŁ",
-    },
-    {
-        title: "Dodatkowy indywidualny jadłospis 14-dniowy",
-        price: "250 ZŁ",
-    },
-    {
-        title: "Jadłospis niestandardowy",
-        extraText: ["w przypadku wielu wykluczeń i alergii"],
-        price: "199 ZŁ",
-    },
-    {
-        title: "Edukacja żywieniowa",
-        extraText: ["pomoc w zmianie nawyków żywieniowych"],
-        price: "100 ZŁ",
-    },
-    {
-        title: "Dojazd do domu/w wyznaczone miejsce",
-        price: "DO 15 KM. GRATIS",
-    },
-    {
-        title: "Analiza składu ciała wraz z omówieniem wyników",
-        price: "50 ZŁ",
-    },
+  {
+    title: "PIERWSZA KONSULTACJA DIETETYCZNA",
+    price: "120 ZŁ",
+    listText: [
+      "Omówienie wywiadu żywieniowego oraz wywiadu dotyczącego stylu życia",
+      "Omówienie wyników badań",
+      "Wstępna diagnoza i omówienie problemu",
+      "Wyznaczenie celu i kierunku dalszej współpracy",
+      "Wsparcie i motywację",
+    ],
+  },
+  {
+    title: "DRUGA KONSULTACJA DIETETYCZNA",
+    price: "150 ZŁ",
+    listText: [
+      "Omówienie przygotowanego planu żywieniowego wraz z listą zakupów",
+      "Edukacja żywieniowa",
+    ],
+  },
+  {
+    title: "KONSULTACJA KONTROLNA",
+    price: "80 ZŁ",
+    listText: [
+      "Analiza postępów dietoterapii",
+      "Przy wystąpieniu trudności, omówienie ich i zaproponowanie rozwiązania",
+      "Kontynuacja edukacji żywieniowej",
+    ],
+  },
+  {
+    title: "Konsultacja kontrolna z nowym planem żywieniowym",
+    price: "150 ZŁ",
+  },
+  {
+    title: "Dodatkowy indywidualny jadłospis 7-dniowy",
+    price: "150 ZŁ",
+  },
+  {
+    title: "Dodatkowy indywidualny jadłospis 14-dniowy",
+    price: "250 ZŁ",
+  },
+  {
+    title: "Jadłospis niestandardowy",
+    extraText: ["w przypadku wielu wykluczeń i alergii"],
+    price: "199 ZŁ",
+  },
+  {
+    title: "Edukacja żywieniowa",
+    extraText: ["pomoc w zmianie nawyków żywieniowych"],
+    price: "100 ZŁ",
+  },
+  {
+    title: "Dojazd do domu/w wyznaczone miejsce",
+    price: "DO 15 KM. GRATIS",
+  },
+  {
+    title: "Analiza składu ciała wraz z omówieniem wyników",
+    price: "50 ZŁ",
+  },
 ];
 
 export const BODY_COMPOSITION_ANALYZER = [
-    "masa ciała",
-    "masa tkanki tłuszczowej",
-    "poziom tłuszczu trzewnego",
-    "masa mięśni szkieletowych",
-    "całkowita zawartość wody w organizmie",
-    "podstawowa przemiana materii",
-    "BMI",
+  "masa ciała",
+  "masa tkanki tłuszczowej",
+  "poziom tłuszczu trzewnego",
+  "masa mięśni szkieletowych",
+  "całkowita zawartość wody w organizmie",
+  "podstawowa przemiana materii",
+  "BMI",
 ];
 
 export const PREPARATION_FOR_MEDICAL_EXAMINATION = [
-    "Zachowaj 3 godzinną przerwę między ostatnim posiłkiem a badaniem",
-    "Dobę przed badaniem nie pij alkoholu",
-    "12 godzin przed badaniem nie wykonuj intensywnych ćwiczeń",
-    "Ok. 30 minut przed badaniem skorzystaj z toalety",
-    "Przed badaniem zdejmij wszystkie metalowe przedmioty",
-    "Dłonie i stopy nie powinny być natłuszczone kremem lub balsamem",
+  "Zachowaj 3 godzinną przerwę między ostatnim posiłkiem a badaniem",
+  "Dobę przed badaniem nie pij alkoholu",
+  "12 godzin przed badaniem nie wykonuj intensywnych ćwiczeń",
+  "Ok. 30 minut przed badaniem skorzystaj z toalety",
+  "Przed badaniem zdejmij wszystkie metalowe przedmioty",
+  "Dłonie i stopy nie powinny być natłuszczone kremem lub balsamem",
 ];
 
 export const PACKAGES = [
-    {
-        title: "NA DOBRY POCZĄTEK",
-        additionalTitle: ["1 miesiąc wsparcia", "299 zł / miesiąc"],
-        paragraphs: [
-            "Pakiet idealny dla osób rozpoczynających przygodę z dietetykiem.",
-            "Obejmuje pierwszą i konsultacja z omówieniem planu żywieniowego oraz konsultację kontrolną.",
-        ],
-        list: [
-            "Omówienie wywiadu żywieniowego oraz wywiadu dotyczącego stylu życia",
-            "Omówienie wyników badań",
-            "Wstępną diagnozę i omówienie problemu",
-            "Wyznaczenie celu i kierunku dalszej współpracy",
-            "Indywidualny, elastyczny jadłospis 7 dniowy",
-            "Listę zakupów",
-            "Regularny kontakt i wsparcie dietetyka",
-        ],
-    },
-    {
-        title: "ZMIANA NA DOBRE",
-        additionalTitle: ["3 miesiące wsparcia", "216 zł / miesiąc"],
-        extraTitle: "897 zł 648 zł łącznie",
-        paragraphs: [
-            "Pakiet idealny dla osób chcących realizować swoje większe cele dietetyczne.",
-            "Obejmuje pierwszą konsultację, 3 konsultacje z omówieniem nowego planu żywieniowego oraz 3 konsultacje kontrolne.",
-        ],
-        list: [
-            "Omówienie wywiadu żywieniowego oraz wywiadu dotyczącego stylu życia",
-            "Omówienie wyników badań",
-            "Wstępną diagnozę i omówienie problemu",
-            "Wyznaczenie celu i kierunku dalszej współpracy",
-            "Indywidualny, elastyczny jadłospis 7 dniowy, na każdy nowy miesiąc",
-            "Listę zakupów",
-            "Utrwalenie nowych nawyków żywieniowych w formie zadań kontrolnych",
-            "Regularny kontakt i wsparcie dietetyka",
-        ],
-    },
-    {
-        title: "TOTALNA METAMORFOZA",
-        additionalTitle: ["6 miesiące wsparcia", "199 zł / miesiąc"],
-        extraTitle: "1794 zł 1194 zł łącznie",
-        paragraphs: [
-            "Pakiet idealny dla osób, które chcą osiągać więcej.",
-            "Obejmuje pierwszą konsultację, 6 konsultacji z omówieniem nowego planu żywieniowego oraz 6 konsultacji kontrolnych.",
-        ],
-        list: [
-            "Omówienie wywiadu żywieniowego oraz wywiadu dotyczącego stylu życia",
-            "Omówienie wyników badań",
-            "Wstępną diagnozę i omówienie problemu",
-            "Wyznaczenie celu i kierunku dalszej współpracy",
-            "Indywidualny, elastyczny jadłospis 7 dniowy, na każdy nowy miesiąc",
-            "Listę zakupów",
-            "Utrwalenie nowych nawyków żywieniowych w formie zadań kontrolnych",
-            "Regularny kontakt i wsparcie dietetyka",
-        ],
-    },
+  {
+    title: "NA DOBRY POCZĄTEK",
+    additionalTitle: ["1 miesiąc wsparcia", "299 zł / miesiąc"],
+    paragraphs: [
+      "Pakiet idealny dla osób rozpoczynających przygodę z dietetykiem.",
+      "Obejmuje pierwszą i konsultacja z omówieniem planu żywieniowego oraz konsultację kontrolną.",
+    ],
+    list: [
+      "Omówienie wywiadu żywieniowego oraz wywiadu dotyczącego stylu życia",
+      "Omówienie wyników badań",
+      "Analiza składu ciała lub dodatkowy dzień jadłospisu",
+      "Wstępną diagnozę i omówienie problemu",
+      "Wyznaczenie celu i kierunku dalszej współpracy",
+      "Indywidualny, elastyczny jadłospis 7 dniowy",
+      "Listę zakupów",
+      "Regularny kontakt i wsparcie dietetyka",
+    ],
+  },
+  {
+    title: "ZMIANA NA DOBRE",
+    additionalTitle: ["3 miesiące wsparcia", "216 zł / miesiąc"],
+    extraTitle: "897 zł 648 zł łącznie",
+    paragraphs: [
+      "Pakiet idealny dla osób chcących realizować swoje większe cele dietetyczne.",
+      "Obejmuje pierwszą konsultację, 3 konsultacje z omówieniem nowego planu żywieniowego oraz 3 konsultacje kontrolne.",
+    ],
+    list: [
+      "Omówienie wywiadu żywieniowego oraz wywiadu dotyczącego stylu życia",
+      "Omówienie wyników badań",
+      "Analiza składu ciała lub dodatkowy dzień jadłospisu",
+      "Wstępną diagnozę i omówienie problemu",
+      "Wyznaczenie celu i kierunku dalszej współpracy",
+      "Indywidualny, elastyczny jadłospis 7 dniowy, na każdy nowy miesiąc",
+      "Listę zakupów",
+      "Utrwalenie nowych nawyków żywieniowych w formie zadań kontrolnych",
+      "Regularny kontakt i wsparcie dietetyka",
+    ],
+  },
+  {
+    title: "TOTALNA METAMORFOZA",
+    additionalTitle: ["6 miesiące wsparcia", "199 zł / miesiąc"],
+    extraTitle: "1794 zł 1194 zł łącznie",
+    paragraphs: [
+      "Pakiet idealny dla osób, które chcą osiągać więcej.",
+      "Obejmuje pierwszą konsultację, 6 konsultacji z omówieniem nowego planu żywieniowego oraz 6 konsultacji kontrolnych.",
+    ],
+    list: [
+      "Omówienie wywiadu żywieniowego oraz wywiadu dotyczącego stylu życia",
+      "Omówienie wyników badań",
+      "Analiza składu ciała lub dodatkowy dzień jadłospisu",
+      "Wstępną diagnozę i omówienie problemu",
+      "Wyznaczenie celu i kierunku dalszej współpracy",
+      "Indywidualny, elastyczny jadłospis 7 dniowy, na każdy nowy miesiąc",
+      "Listę zakupów",
+      "Utrwalenie nowych nawyków żywieniowych w formie zadań kontrolnych",
+      "Regularny kontakt i wsparcie dietetyka",
+    ],
+  },
 ];
