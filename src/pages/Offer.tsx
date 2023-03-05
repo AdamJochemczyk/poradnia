@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Navigation } from "src/Components/Navigation/Navigation";
 import { PageTitle } from "src/Components/PageTitle/PageTitle";
 import styles from "./Offer.module.scss";
@@ -29,12 +29,6 @@ import {
 import { Footer } from "src/Components/Footer/Footer";
 
 export const Offer = () => {
-  const [isWide, setIsWide] = useState(window.innerWidth < 768);
-
-  const handleResize = () => setIsWide(window.innerWidth < 768);
-
-  window.addEventListener("resize", handleResize);
-
   return (
     <>
       <Navigation />
@@ -92,6 +86,7 @@ export const Offer = () => {
                     <BoxOffer
                       key={offer.title}
                       title={offer.title}
+                      upperPrice={offer.price}
                       data={offer.listText}
                     />
                   );
@@ -100,7 +95,7 @@ export const Offer = () => {
                     <BoxOffer
                       key={offer.title}
                       title={offer.title}
-                      price={offer.price}
+                      lowerPrice={offer.price}
                       data={offer.extraText}
                       titleParagraphStyle="small"
                       innerContainerStyle="innerContainer"
@@ -141,71 +136,46 @@ export const Offer = () => {
               />
             </TextContainer>
           </div>
-          {isWide ? (
-            <Container>
-              <div className={styles.biaMethod}>
-                <Paragraph
-                  text={
-                    <>
-                      Analizator składu ciała wykorzystuje metodę bioimpedancji
-                      elektrycznej (BIA)
-                      <br />– przepływu przez ciało prądu o niskim
-                      (niewyczuwalnym) natężeniu. Metoda ta polega na
-                      bezinwazyjnym, bezpiecznym pomiarze parametrów ciała m.in.
-                      takich jak:
-                    </>
-                  }
-                  styleName="small"
-                />
-                <div>
-                  <UnorderedList>
-                    {BODY_COMPOSITION_ANALYZER.map((text) => (
-                      <UnorderedListItem key={text} text={text} />
-                    ))}
-                  </UnorderedList>
-                </div>
-              </div>
-              <div className={styles.personImageContainer}>
-                <img
-                  className={styles.personImage}
-                  src={personOnScale}
-                  alt="Person on scale"
-                />
-              </div>
-            </Container>
-          ) : (
-            <>
-              <div className={styles.biaMethod}>
-                <Paragraph
-                  text={
-                    <>
-                      Analizator składu ciała wykorzystuje metodę bioimpedancji
-                      elektrycznej (BIA)
-                      <br />– przepływu przez ciało prądu o niskim
-                      (niewyczuwalnym) natężeniu. Metoda ta polega na
-                      bezinwazyjnym, bezpiecznym pomiarze parametrów ciała m.in.
-                      takich jak:
-                    </>
-                  }
-                  styleName="small"
-                />
-                <div>
-                  <UnorderedList>
-                    {BODY_COMPOSITION_ANALYZER.map((text) => (
-                      <UnorderedListItem key={text} text={text} />
-                    ))}
-                  </UnorderedList>
-                </div>
-              </div>
-              <div className={styles.personImageContainer}>
-                <img
-                  className={styles.personImage}
-                  src={personOnScale}
-                  alt="Person on scale"
-                />
-              </div>
-            </>
-          )}
+          <div className={styles.biaMethod}>
+            <div>
+              <Paragraph
+                text={
+                  <>
+                    Analizator składu ciała wykorzystuje metodę bioimpedancji
+                    elektrycznej (BIA)
+                    <br />– przepływu przez ciało prądu o niskim
+                    (niewyczuwalnym) natężeniu. Metoda ta polega na
+                    bezinwazyjnym, bezpiecznym pomiarze parametrów ciała m.in.
+                    takich jak:
+                  </>
+                }
+                styleName="small"
+              />
+              <UnorderedList>
+                {BODY_COMPOSITION_ANALYZER.map((text) => (
+                  <UnorderedListItem key={text} text={text} />
+                ))}
+              </UnorderedList>
+            </div>
+            <div
+              className={`${styles.personImageContainer} ${styles.personImageContainerHideOnDesktop}`}
+            >
+              <img
+                className={styles.personImage}
+                src={personOnScale}
+                alt="Person on scale"
+              />
+            </div>
+          </div>
+          <div
+            className={`${styles.personImageContainer} ${styles.personImageContainerShowOnDesktop}`}
+          >
+            <img
+              className={styles.personImage}
+              src={personOnScale}
+              alt="Person on scale"
+            />
+          </div>
           <div className={styles.theCourseOfExamination}>
             <TextContainer styleName="withBottomMargin">
               <MinorHeader header="PRZEBIEG BADANIA" styleName="green" />

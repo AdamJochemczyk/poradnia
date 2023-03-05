@@ -26,7 +26,7 @@
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     grid-template-rows: 1fr;
-    gap: 12px 12px;
+    gap: 12px 80px;
     align-items: center;
   }
 }
@@ -100,6 +100,22 @@
     }
   }
 
+  .personImageContainerHideOnDesktop {
+    display: block;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .personImageContainerShowOnDesktop {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+
   .personImage {
     @media screen and (min-width: 425px) {
       margin-top: 15px;
@@ -112,6 +128,9 @@
     @media screen and (min-width: 1440px) {
       max-width: 100%;
     }
+    @media screen and (min-width: 1920px) {
+      max-width: 85%;
+    }
   }
 
   .theCourseOfExamination {
@@ -123,6 +142,13 @@
 
   .biaMethod {
     grid-area: BIA;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      margin-top: 15px;
+      gap: 15px;
+    }
   }
 
   .preparationForMedicalExamination {

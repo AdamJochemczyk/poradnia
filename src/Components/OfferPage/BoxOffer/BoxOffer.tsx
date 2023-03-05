@@ -7,6 +7,8 @@ interface BoxOfferProps {
   title: string;
   data?: string[];
   price?: string;
+  upperPrice?: string;
+  lowerPrice?: string;
   titleParagraphStyle?: "default" | "small";
   innerContainerStyle?: "default" | "innerContainer";
   listItemStyle?: "default" | "dash" | "spacedItem";
@@ -16,6 +18,8 @@ export const BoxOffer = ({
   title,
   data = [],
   price,
+  upperPrice,
+  lowerPrice,
   titleParagraphStyle = "default",
   innerContainerStyle = "default",
   listItemStyle = "default",
@@ -39,7 +43,14 @@ export const BoxOffer = ({
     </div>
   ) : (
     <div className={styles.boxOffer}>
-      <p className={titleParagraphStyles[titleParagraphStyle]}>{title}</p>
+      <div className={styles.boxOffer__innerTextContainer}>
+        <p className={titleParagraphStyles[titleParagraphStyle]}>{title}</p>
+        {upperPrice && (
+          <p className={titleParagraphStyles[titleParagraphStyle]}>
+            {upperPrice}
+          </p>
+        )}
+      </div>
       <div className={innerContainerStyles[innerContainerStyle]}>
         <UnorderedList>
           {data.map((text) => (
@@ -50,7 +61,9 @@ export const BoxOffer = ({
             />
           ))}
         </UnorderedList>
-        {price && <p className={styles.boxOffer__paragraph}>{price}</p>}
+        {lowerPrice && (
+          <p className={styles.boxOffer__paragraph}>{lowerPrice}</p>
+        )}
       </div>
     </div>
   );
