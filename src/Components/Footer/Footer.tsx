@@ -17,7 +17,6 @@ import { toast } from "react-toastify";
 import { addSubscriberToList } from "src/api/addSubscriberToList";
 import { sendEmail } from "src/api/sendEmailToCompany";
 
-// TODO: links
 export const Footer = () => {
   const [isCookieAccepted, setIsCookieAccepted] = useState(false);
   const cookie = getCookie("allow");
@@ -64,7 +63,12 @@ export const Footer = () => {
       message.value !== ""
     ) {
       try {
-        await sendEmail(nameAndSurname.value,phone.value,email.value,message.value);
+        await sendEmail(
+          nameAndSurname.value,
+          phone.value,
+          email.value,
+          message.value
+        );
         toast.success(
           "Dziękujemy za wiadomość odpowiemy najszybciej jak to możliwe"
         );
@@ -177,22 +181,30 @@ export const Footer = () => {
           </a>
           <div className={style.socials}>
             <div className={style.socials_icons}>
-              <div>
+              <a
+                href="https://www.facebook.com/profile.php?id=100088199794512"
+                target="_blank"
+                rel="noreferrer"
+              >
                 {" "}
                 <img
                   className={style.contact_fb}
                   src={fb}
                   alt="kontakt@poradniadietetyczna.online"
                 />
-              </div>
-              <div>
+              </a>
+              <a
+                href="https://www.instagram.com/poradniadietetyczna.online"
+                target="_blank"
+                rel="noreferrer"
+              >
                 {" "}
                 <img
                   className={style.contact_insta}
                   src={insta}
                   alt="kontakt@poradniadietetyczna.online"
                 />
-              </div>
+              </a>
             </div>
             <picture className={style.fork}>
               <source srcSet={footerForkTop} media="(min-width: 800px)" />
