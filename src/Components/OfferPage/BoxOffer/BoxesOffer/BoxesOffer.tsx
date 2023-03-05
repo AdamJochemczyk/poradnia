@@ -1,4 +1,3 @@
-import React from "react";
 import { PACKAGES } from "src/Utilities/mocks";
 import {
     Paragraph,
@@ -10,6 +9,17 @@ import { Button } from "src/Components/Buttons/Button";
 import styles from "./BoxesOffer.module.scss";
 
 export const BoxesOffer = () => {
+
+  const handleOfferPick=(name:string)=>{
+    const textArea=document.querySelector("#contactFormText")
+    const contactSection=document.querySelector("#contact")
+    if (textArea && contactSection) {
+      //@ts-ignore
+      textArea.value = `Wybieram pakiet: ${name.toLowerCase()}`;
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <div className={styles.boxesOfferMainContainer}>
       {PACKAGES.map((itemPackage) => (
@@ -44,7 +54,11 @@ export const BoxesOffer = () => {
               )}
             </TextContainer>
             <div>
-              <Button text="Wybieram" styleName="hideOnDesktop" />
+              <Button
+                text="Wybieram"
+                styleName="hideOnDesktop"
+                handleClick={() => handleOfferPick(itemPackage.title)}
+              />
             </div>
           </div>
           <div>
@@ -69,7 +83,11 @@ export const BoxesOffer = () => {
               ))}
             </UnorderedList>
           </div>
-          <Button text="Wybieram" styleName="showOnDesktop" />
+          <Button
+            text="Wybieram"
+            styleName="showOnDesktop"
+            handleClick={() => handleOfferPick(itemPackage.title)}
+          />
         </div>
       ))}
     </div>

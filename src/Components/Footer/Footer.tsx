@@ -12,17 +12,11 @@ import Polska from "../../assets/Graphics/POLSKA.png";
 import unia from "../../assets/Graphics/unia.png";
 import sla from "../../assets/Graphics/sla.png";
 import badajto from "../../assets/Graphics/badajto.png";
-import { getCookie } from "src/Utilities/cookies";
 import { toast } from "react-toastify";
 import { addSubscriberToList } from "src/api/addSubscriberToList";
 import { sendEmail } from "src/api/sendEmailToCompany";
 
 export const Footer = () => {
-  const [isCookieAccepted, setIsCookieAccepted] = useState(false);
-  const cookie = getCookie("allow");
-  useEffect(() => {
-    setIsCookieAccepted(cookie.includes("yes"));
-  }, [cookie]);
 
   const handleSubmitNewsletter = async (e: any) => {
     e.preventDefault();
@@ -111,7 +105,6 @@ export const Footer = () => {
             </div>
             <div className={style.newsletter_send_cont}>
               <Button
-                disabled={!isCookieAccepted}
                 text="wyślij"
                 type="submit"
               />
@@ -122,7 +115,7 @@ export const Footer = () => {
       <section className={style.contactFormSection} id="contact">
         <div>
           <p className={style.contactFormHeader}>
-            Chesz ze mną współpracować?
+            Chcesz ze mną współpracować?
             <br />
             Skontaktuj się!
           </p>
@@ -148,6 +141,7 @@ export const Footer = () => {
             </div>
             <div>
               <textarea
+                id="contactFormText"
                 className={`${style.contactForm_input} ${style.contactForm_area}`}
                 placeholder="Treść"
               />

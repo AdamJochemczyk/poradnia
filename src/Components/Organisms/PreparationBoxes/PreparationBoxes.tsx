@@ -85,7 +85,7 @@ export const PreparationBoxes = () => {
             </li>
             <li>
               Z wypełnionym skierowaniem udaj się do najbliższego punktu
-              Śląskich Laboratiriów Analitycznych lub punktu Badaj.To
+              Śląskich Laboratoriów Analitycznych lub punktu Badaj.To
             </li>
             <li>
               Pokaż wypełnione skierowanie lub zdjęcie wypełnionego skierowania
