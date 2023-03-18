@@ -73,10 +73,6 @@ export const OFFER_DATA = [
     title: "Dojazd do domu/w wyznaczone miejsce",
     price: "DO 15 KM. GRATIS",
   },
-  {
-    title: "Analiza składu ciała wraz z omówieniem wyników",
-    price: "50 ZŁ",
-  },
 ];
 
 export const BODY_COMPOSITION_ANALYZER = [
@@ -104,7 +100,7 @@ export const PACKAGES = [
     additionalTitle: ["1 miesiąc wsparcia", "299 zł / miesiąc"],
     paragraphs: [
       "Pakiet idealny dla osób rozpoczynających przygodę z dietetykiem.",
-      "Obejmuje pierwszą i konsultacja z omówieniem planu żywieniowego oraz konsultację kontrolną.",
+      "Obejmuje pierwszą konsultację, konsultację z omówieniem planu żywieniowego oraz konsultację kontrolną.",
     ],
     list: [
       "Omówienie wywiadu żywieniowego oraz wywiadu dotyczącego stylu życia",
@@ -113,7 +109,7 @@ export const PACKAGES = [
       "Wstępną diagnozę i omówienie problemu",
       "Wyznaczenie celu i kierunku dalszej współpracy",
       "Indywidualny, elastyczny jadłospis 7 dniowy",
-      "Listę zakupów",
+      "Lista zakupów",
       "Regularny kontakt i wsparcie dietetyka",
     ],
   },
@@ -132,14 +128,14 @@ export const PACKAGES = [
       "Wstępną diagnozę i omówienie problemu",
       "Wyznaczenie celu i kierunku dalszej współpracy",
       "Indywidualny, elastyczny jadłospis 7 dniowy, na każdy nowy miesiąc",
-      "Listę zakupów",
+      "Lista zakupów",
       "Utrwalenie nowych nawyków żywieniowych w formie zadań kontrolnych",
       "Regularny kontakt i wsparcie dietetyka",
     ],
   },
   {
     title: "TOTALNA METAMORFOZA",
-    additionalTitle: ["6 miesiące wsparcia", "199 zł / miesiąc"],
+    additionalTitle: ["6 miesięcy wsparcia", "199 zł / miesiąc"],
     extraTitle: "1794 zł 1194 zł łącznie",
     paragraphs: [
       "Pakiet idealny dla osób, które chcą osiągać więcej.",
@@ -152,7 +148,7 @@ export const PACKAGES = [
       "Wstępną diagnozę i omówienie problemu",
       "Wyznaczenie celu i kierunku dalszej współpracy",
       "Indywidualny, elastyczny jadłospis 7 dniowy, na każdy nowy miesiąc",
-      "Listę zakupów",
+      "Lista zakupów",
       "Utrwalenie nowych nawyków żywieniowych w formie zadań kontrolnych",
       "Regularny kontakt i wsparcie dietetyka",
     ],

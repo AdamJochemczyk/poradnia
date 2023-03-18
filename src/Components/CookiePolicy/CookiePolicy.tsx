@@ -35,7 +35,6 @@ export const CookiePolicy = () => {
         do informacji w plikach cookies?
       </p>
       <div className={style.buttons}>
-        <div className={style.mobile}>
           <Button
             text="NIE ZGADZAM SIĘ"
             transparent
@@ -47,8 +46,6 @@ export const CookiePolicy = () => {
             small
             handleClick={() => cookiesAction(true)}
           />
-        </div>
-        <Button text="USTAWIENIA SZCZEGÓŁOWE" transparent small />
       </div>
     </div>
   ) : (

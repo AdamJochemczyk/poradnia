@@ -8,7 +8,8 @@ interface TextContainerProps {
     | "halfScreen"
     | "withBottomMargin"
     | "almostHalfScreen"
-    | "halfScreenOnMobile";
+    | "halfScreenOnMobile"
+    | "noMargin"
 }
 
 export const TextContainer = ({
@@ -21,6 +22,7 @@ export const TextContainer = ({
     withBottomMargin: styles.textContainer__withBottomMargin,
     almostHalfScreen: styles.textContainer__almostHalfScreen,
     halfScreenOnMobile: styles.textContainer__halfScreenOnMobile,
+    noMargin: styles.textContainer__noMargin
   };
 
   return <div className={containerClass[styleName]}>{children}</div>;

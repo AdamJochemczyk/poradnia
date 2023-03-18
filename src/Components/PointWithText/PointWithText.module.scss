@@ -2,7 +2,8 @@
 
 .container {
   display: grid;
-  grid-template-columns: 35px 1fr;
+  grid-template-columns: 37px 1fr;
+  gap: 11px;
   margin: 17px 0;
 }
 
@@ -13,9 +14,9 @@
     rgba(255, 255, 255, 0.52) 100%
   );
   border: 2px solid #f39b9b;
-  width: 35px;
-  height: 35px;
-  font-size: 12px;
+  width: 37px;
+  height: 37px;
+  font-size: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,14 +27,13 @@
 }
 
 .info {
-  margin-top: 5px;
-  margin-left: 25px;
+  margin-top: 10px;
 }
 
 .primaryText {
   color: $darkGreen;
-  font-family: "FuturaPTExtraBold";
-  font-size: 12px;
+  font-family: "FuturaPTBold";
+  font-size: 14px;
   text-transform: uppercase;
   line-height: 15px;
   font-weight: 800;
@@ -42,7 +42,7 @@
 .secondaryText {
   color: $darkGreen;
   font-family: "Futura PT";
-  font-size: 9px;
+  font-size: 10px;
   line-height: 12px;
   font-weight: 800;
   margin-top: 8px;

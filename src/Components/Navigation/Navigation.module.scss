@@ -75,13 +75,15 @@
 .navbar {
     position: sticky;
     top: 0;
-    padding: 20px;
-    min-height: 150px;
+    padding: 20px 35px 0 20px;
+    min-height: 82px;
     background: linear-gradient(180deg, #FF9B4D 23.44%, #FFFFFF 100%);
     @include flexB;
     z-index: 10;
 
     &__logo {
+        display: flex;
+        align-items: center;
         width: clamp(190px, 40%, 416px);
         height: 98px;
 
@@ -113,6 +115,8 @@
 @media screen and (min-width: 900px) {
     .navbar {
         gap: 30px;
+        padding: 20px;
+        min-height: 150px;
 
         &__handle {
             display: none;

@@ -29,14 +29,14 @@ export const WhenHelp = () => {
         <div className={style.point3}>
           <PointWithText
             pointNumber={3}
-            primaryText={"Jeśli jesteś osobą chorą."}
+            primaryText={"Jeśli jesteś osobą chorą"}
             secondaryText={
               "Pomogę poprawić jakość Twojego życia, wyniki badań, a także odstawić leki, gdy jest to możliwe"
             }
           />
         </div>
 
-        <h4 className={style.subtitle}>Jeśli cierpisz na</h4>
+        <h4 className={style.subtitle}>Jeśli cierpisz na:</h4>
         <div className={`${style.box} ${style.box1}`}>
           <p className={style.box_primary}>
             Zaburzenia gospodarki węglowodanowej

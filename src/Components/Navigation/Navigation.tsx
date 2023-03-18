@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./Navigation.module.scss";
-import photo from "../../assets/Photos/logoZielone.png";
+import logoDesktop from "../../assets/Photos/logoDesktop.svg";
+import logoMobile from "../../assets/Photos/logoMobile.svg";
 import { Link, useLocation } from "react-router-dom";
 //@ts-ignore
 import { HashLink } from "react-router-hash-link";
@@ -38,7 +39,7 @@ export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => setIsOpen(!isOpen);
 
-  const [showLogo, setShowLogo] = useState(false);
+  const [showLogo, setShowLogo] = useState(window.innerWidth < 900);
 
   const handleLogoChange = () => {
     if (window.innerWidth < 900) {
@@ -55,15 +56,16 @@ export const Navigation = () => {
     };
   }, []);
 
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
 
-  const scrollWithOffset = (el:any, offset:number) => {
-  const elementPosition = el.offsetTop - offset;
-  window.scroll({
-    top: elementPosition,
-    left: 0,
-    behavior: "smooth"
-  });}
+  const scrollWithOffset = (el: any, offset: number) => {
+    const elementPosition = el.offsetTop - offset;
+    window.scroll({
+      top: elementPosition,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <>
@@ -73,7 +75,10 @@ export const Navigation = () => {
         <div className={styles.navbar__logo}>
           {showLogo ? (
             <Link to="/">
-              <img src={photo} alt="Logo" />
+              <picture>
+                <source srcSet={logoDesktop} media="(min-width: 900px)" />
+                <img src={logoMobile} alt="logo mobile" />
+              </picture>
             </Link>
           ) : null}
         </div>

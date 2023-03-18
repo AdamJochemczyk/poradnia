@@ -8,7 +8,7 @@ function Introduce() {
       <div className={styles.introduce__text}>
         <div className={styles.introduce__left}>
           <p>
-            <span className={styles.bold}>Cześć</span>
+            <span className={styles.bold}>Cześć!</span>
           </p>
           <p>
             Nazywam się <span className={styles.bold}>Małgorzata Baron</span> i

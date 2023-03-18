@@ -16,6 +16,10 @@
 .btn {
   @include button-style;
 
+  &__choose{
+    width: 90px;
+  }
+
   &__showOnDesktop {
     @include button-style;
     margin: 20px 0;

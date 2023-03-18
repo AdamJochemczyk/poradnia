@@ -28,12 +28,13 @@
       color: $pink;
       font-family: "FuturaPTBold";
     }
+    height: 38px;
   }
   &_checkbox_cont {
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: 8px;
+    font-size: 9px;
     color: $pink;
   }
   &_checkbox {
