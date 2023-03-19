@@ -30,10 +30,7 @@
 }
 
 .potOfVegetables {
-  display: none;
-  @media screen and (min-width: 768px) {
-    display: block;
-  }
+  display: block;
 }
 
 .potOfVegetablesLarge {
@@ -64,13 +61,13 @@
     border-radius: 20px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 150px;
+    grid-template-rows: 180px 100px 220px 200px 340px;
     align-items: end;
     grid-template-areas:
-      "iA iA pI pI tCOE tCOE"
+      "iA iA . . tCOE tCOE"
       "tA tA pI pI tCOE tCOE"
+      "BIA BIA pI pI tCOE tCOE"
       "BIA BIA pI pI pFME pFME"
-      ". . . . pFME pFME"
       "con con . . pFME pFME";
 
     // iA = individualApproach
