@@ -11,8 +11,8 @@ function Fundamentals() {
       <h2 className={style.fundamentals__header}>
         FUNDAMENTY SKUTECZNEJ DIETY
       </h2>
-      <div className={style.content}>
-        <div className={style.content__desktop}>
+      <div className={style.content__desktop}>
+        <div className={style.content}>
           <div className={style.content__element}>
             <img src={cart} alt="cart" className={style.image} />
             <p className={style.text}>
@@ -25,8 +25,9 @@ function Fundamentals() {
           <div className={style.content__element}>
             <img src={fork} alt="fork" className={style.image} />
             <p className={style.text}>
-              Ty mówisz <span className={style.bold}>co lubisz,</span><br /> a ja
-              mówię Ci <span className={style.bold}>jak i kiedy to jeść.</span>
+              Ty mówisz <span className={style.bold}>co lubisz,</span>
+              <br /> a ja mówię Ci{" "}
+              <span className={style.bold}>jak i kiedy to jeść.</span>
             </p>
           </div>
           <div className={style.content__element}>

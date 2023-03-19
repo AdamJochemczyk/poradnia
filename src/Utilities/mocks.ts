@@ -18,7 +18,14 @@ export const MOBILE_AND_ONLINE_DIETS = [
   },
 ];
 
-export const OFFER_DATA = [
+type OfferDataProps = {
+  title: string;
+  price: string;
+  listText?: string[];
+  extraText?: string[];
+}[];
+
+export const OFFER_DATA: OfferDataProps = [
   {
     title: "PIERWSZA KONSULTACJA DIETETYCZNA",
     price: "120 ZŁ",
@@ -60,13 +67,11 @@ export const OFFER_DATA = [
     price: "250 ZŁ",
   },
   {
-    title: "Jadłospis niestandardowy",
-    extraText: ["w przypadku wielu wykluczeń i alergii"],
+    title: "Jadłospis niestandardowy - w przypadku wielu wykluczeń i alergii",
     price: "199 ZŁ",
   },
   {
-    title: "Edukacja żywieniowa",
-    extraText: ["pomoc w zmianie nawyków żywieniowych"],
+    title: "Edukacja żywieniowa - pomoc w zmianie nawyków żywieniowych",
     price: "100 ZŁ",
   },
   {

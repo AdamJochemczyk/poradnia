@@ -15,6 +15,7 @@
   margin-top: 12px;
 
   @media screen and (min-width: 1024px) {
+    border: 8px solid #f39b9b;
     padding: 18px 22px;
     margin-top: 18px;
     gap: 10px;
@@ -53,7 +54,7 @@
 
   &__paragraph {
     font-family: "FuturaPTBold";
-    font-size: clamp(8px, 1.4vw, 20px);
+    font-size: clamp(9px, 1.4vw, 17px);
     line-height: 13px;
     color: $darkGreen;
   }

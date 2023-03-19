@@ -8,7 +8,9 @@
   overflow: hidden;
   font-size: 12px;
 
-  @include flexB;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-direction: column;
 
   &::before {
@@ -96,9 +98,13 @@
   }
 
   .container {
+    justify-content: flex-start;
+    gap: 70px;
     align-items: start;
+    min-height: 0;
     &::before {
       top: 0;
+      height: 100%;
       background-image: url("../../assets/Photos/startowa.jpg");
     }
 

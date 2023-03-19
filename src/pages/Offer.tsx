@@ -6,9 +6,9 @@ import boxOfferStyles from "src/Components/OfferPage/BoxOffer/BoxOffer.module.sc
 import bowlOffer from "src/assets/Photos/bowl.png";
 import bowlOfferMedium from "src/assets/Photos/bowl@2x.png";
 import bowlOfferLarge from "src/assets/Photos/bowl@3x.png";
-import fruits from "src/assets/Photos/fruits.png";
 import potOfVegetables from "src/assets/Photos/potOfVegetables.png";
-// import potOfVegetablesLarge from "src/assets/Photos/potOfVegetablesLarge.png";
+import potOfVegetablesLarge from "src/assets/Photos/potOfVegetablesLarge.png";
+import fruits from "src/assets/Photos/fruits.png";
 import personOnScale from "src/assets/Photos/personOnScale.png";
 import {
   OFFER_DATA,
@@ -41,7 +41,7 @@ export const Offer = () => {
     <>
       <Navigation />
       <Article>
-        <PageTitle text={"zacznij już teraz"} />
+        <PageTitle text={"zacznij już teraz!"} />
         <section className={styles.startNowSection}>
           <Container>
             <div>
@@ -62,12 +62,21 @@ export const Offer = () => {
           </Container>
           <MobileAndOnlineDiets />
         </section>
-        <div className={styles.fruitsImage}>
-          <img src={fruits} alt="Fruits" />
-        </div>
         <section>
           <div>
-            <MinorHeader header="OFERTA" />
+            <MinorHeader styleName="center" header="OFERTA" />
+            <div className={styles.offerWithBowlDesktop}>
+              <Paragraph
+                spanText="Poradnia Dietetyczna powstała z myślą o tworzeniu elastycznych,
+                            spersonalizowanych jadłospisów dopasowanych do potrzeb i preferencji
+                            wszystkich klientów."
+              />
+              <Paragraph
+                text="Konsultacje odbywają się w formie "
+                spanText="online lub telefonicznie. "
+                extraText="Jako dietetyk mobilny oferuję także konsultacje z dojazdem do domu lub w wyznaczone miejsce."
+              />
+            </div>
             <div className={styles.offerWithBowl}>
               <Container styleName="almostHalfScreen">
                 <Paragraph
@@ -88,11 +97,11 @@ export const Offer = () => {
           </div>
         </section>
         <section>
-          <MinorHeader header="PAKIETY" />
+          <MinorHeader styleName="center" header="PAKIETY" />
           <BoxesOffer />
         </section>
         <section>
-          <MinorHeader header="CENNIK POJEDYNCZYCH USŁUG" />
+          <MinorHeader styleName="center" header="CENNIK POJEDYNCZYCH USŁUG" />
           <div className={styles.offerSection}>
             <div className={styles.boxOfferContainer}>
               {OFFER_DATA.map((offer) => {
@@ -142,9 +151,10 @@ export const Offer = () => {
                 </div>
               </div>
             </div>
-            {/* <div className={styles.potOfVegetablesLarge}>
+            <div className={styles.potOfVegetablesLarge}>
+              <img src={fruits} alt="fruits" />
               <img src={potOfVegetablesLarge} alt="Pot of vegetables" />
-            </div> */}
+            </div>
           </div>
         </section>
         {showDetailsBox ? (
