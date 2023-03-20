@@ -2,7 +2,9 @@
   margin: 0 20px;
 }
 .pointWithPhoto {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
   gap: 10px;
   img {
     max-width: 100%;
@@ -41,6 +43,7 @@
     }
   }
   .pointWithPhoto {
+    display: flex;
     img.small {
       display: none;
     }

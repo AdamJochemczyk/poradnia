@@ -1,5 +1,5 @@
 import styles from "./Introduce.module.scss"
-import gosia from "../../assets/Photos/fffff.png"
+import gosia from "../../assets/Graphics/GosiaZJablkiem.png"
 
 function Introduce() {
   return (

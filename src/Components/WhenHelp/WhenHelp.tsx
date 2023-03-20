@@ -12,7 +12,7 @@ export const WhenHelp = () => {
             pointNumber={1}
             primaryText={"Jeśli chcesz pozbyć się zbędnych kilogramów"}
             secondaryText={
-              "Pomogę Ci sprawić, że jedzenie staje się Twoim sprzymierzeńcem"
+              "Pomogę Ci sprawić, że jedzenie stanie się Twoim sprzymierzeńcem"
             }
           />
           <PointWithText
@@ -26,7 +26,7 @@ export const WhenHelp = () => {
             pointNumber={3}
             primaryText={"Jeśli jesteś osobą chorą"}
             secondaryText={
-              "Pomogę poprawić jakość Twojego życia, wyniki badań, a także odstawić leki, gdy jest to możliwe"
+              "Pomogę poprawić jakość Twojego życia, wyniki badań, a także odstawić leki, gdy jest to możliwe."
             }
           />
 

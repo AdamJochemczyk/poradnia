@@ -90,10 +90,8 @@
   .personImageContainer {
     grid-area: pI;
 
-    @media screen and (min-width: 1920px) {
-      justify-self: center;
-      align-self: baseline;
-    }
+    justify-self: center;
+    align-self: baseline;
   }
 
   .personImageContainerHideOnDesktop {

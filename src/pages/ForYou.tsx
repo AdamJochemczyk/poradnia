@@ -2,7 +2,6 @@ import { Navigation } from "../Components/Navigation/Navigation";
 import { PageTitle } from "../Components/PageTitle/PageTitle";
 import forYouMobile from "src/assets/Graphics/for-you-hero-mobile.png";
 import forYouDesktop from "src/assets/Graphics/for-you-hero-desktop.png";
-import pomaranczaBig from "src/assets/Graphics/pomaranczaBig.png"
 import { PointWithText } from "src/Components/PointWithText/PointWithText";
 import { PreparationBoxes } from "src/Components/Organisms/PreparationBoxes/PreparationBoxes";
 import styles from "./ForYou.module.scss";
@@ -30,7 +29,7 @@ const { pathname } = useLocation();
         <section className={styles.hero}>
           <PageTitle text={"jak najszybciej osiągniesz swój cel?"} />
           <picture>
-            <source srcSet={forYouDesktop} media="(min-width: 400px)" />
+            <source srcSet={forYouDesktop} media="(min-width: 800px)" />
             <img src={forYouMobile} alt="przekrojone owoce" />
           </picture>
           <div className={styles.point1}>
@@ -109,7 +108,7 @@ dietoterapii, oraz przy wystąpieniu trudności, omawiamy je i rozwiązujemy. Ko
           </div>
           <img
             className={styles.big}
-            src={pomaranczaBig}
+            src={pomarancza}
             alt="Gosia z pomarańczą"
           />
         </section>
