@@ -104,10 +104,7 @@ export const Footer = () => {
               Wyrażam zgodę na przetwarzanie danych osobowych
             </div>
             <div className={style.newsletter_send_cont}>
-              <Button
-                text="wyślij"
-                type="submit"
-              />
+              <Button text="wyślij" type="submit" />
             </div>
           </form>
         </div>
@@ -180,11 +177,10 @@ export const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                {" "}
                 <img
                   className={style.contact_fb}
                   src={fb}
-                  alt="kontakt@poradniadietetyczna.online"
+                  alt="https://www.facebook.com/profile.php?id=100088199794512"
                 />
               </a>
               <a
@@ -192,11 +188,10 @@ export const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                {" "}
                 <img
                   className={style.contact_insta}
                   src={insta}
-                  alt="kontakt@poradniadietetyczna.online"
+                  alt="https://www.instagram.com/poradniadietetyczna.online"
                 />
               </a>
             </div>
