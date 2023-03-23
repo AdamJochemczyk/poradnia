@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./Navigation.module.scss";
-import logo from "../../assets/Photos/logokolor2.png";
+import logoDesktop from "../../assets/Photos/logoDesktop.svg";
+import logoMobile from "../../assets/Photos/logoMobile.svg";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 //@ts-ignore
 import { HashLink } from "react-router-hash-link";
@@ -91,7 +92,8 @@ export const Navigation = () => {
         <div className={styles.navbar__logo}>
           {showLogo ? (
             <picture onClick={handleLogoClick}>
-              <img src={logo} alt="logo mobile" />
+              <source srcSet={logoDesktop} media="(min-width: 900px)" />
+              <img src={logoMobile} alt="logo mobile" />
             </picture>
           ) : null}
         </div>
