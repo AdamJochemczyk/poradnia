@@ -1,24 +1,23 @@
 import { PACKAGES } from "src/Utilities/mocks";
 import {
-    Paragraph,
-    TextContainer,
-    UnorderedList,
-    UnorderedListItem,
+  Paragraph,
+  TextContainer,
+  UnorderedList,
+  UnorderedListItem,
 } from "../..";
 import { Button } from "src/Components/Buttons/Button";
 import styles from "./BoxesOffer.module.scss";
 
 export const BoxesOffer = () => {
-
-  const handleOfferPick=(name:string)=>{
-    const textArea=document.querySelector("#contactFormText")
-    const contactSection=document.querySelector("#contact")
+  const handleOfferPick = (name: string) => {
+    const textArea = document.querySelector("#contactFormText");
+    const contactSection = document.querySelector("#workWithMe");
     if (textArea && contactSection) {
       //@ts-ignore
       textArea.value = `Wybieram pakiet: ${name.toLowerCase()}`;
-      contactSection.scrollIntoView({ behavior: "smooth" });
+      contactSection.scrollIntoView({ behavior: "smooth", inline: "start" });
     }
-  }
+  };
 
   return (
     <div className={styles.boxesOfferMainContainer}>

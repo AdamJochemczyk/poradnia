@@ -1,7 +1,6 @@
 import { useState } from "react";
 import showDetails from "src/assets/Graphics/showDetails.svg";
 import styles from "./PreparationBoxes.module.scss";
-import pdf from "src/assets/skierowanie.pdf";
 
 export const PreparationBoxes = () => {
   const [showDetailsBox, setShowDetailsBox] = useState(false);
@@ -74,7 +73,11 @@ export const PreparationBoxes = () => {
           <ul>
             <li>
               Pobierz specjalne skierowanie z kodem rabatowym, klikając{" "}
-              <a href={pdf} target="_blank" className={styles.discountLink}>
+              <a
+                href={process.env.PUBLIC_URL+"/skierowanie.pdf"}
+                target="_blank"
+                className={styles.discountLink}
+              >
                 tutaj
               </a>
             </li>
@@ -85,7 +88,7 @@ export const PreparationBoxes = () => {
             </li>
             <li>
               Z wypełnionym skierowaniem udaj się do najbliższego punktu
-              Śląskich Laboratoriów Analitycznych lub punktu Badaj.To
+              Śląskich Laboratoriów Analitycznych lub punktu Badaj.to
             </li>
             <li>
               Pokaż wypełnione skierowanie lub zdjęcie wypełnionego skierowania

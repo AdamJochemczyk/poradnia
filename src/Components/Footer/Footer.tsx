@@ -85,7 +85,9 @@ export const Footer = () => {
           <p>
             Chcesz zobaczyć przykładowy jadłospis lub chcesz być na bieżąco?
           </p>
-          <p className={style.newsletter_title}>Zapisz się do newslettera!</p>
+          <p className={style.newsletter_title} id="workWithMe">
+            Zapisz się do newslettera!
+          </p>
         </div>
         <div>
           <form onSubmit={handleSubmitNewsletter}>

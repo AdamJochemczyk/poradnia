@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./Navigation.module.scss";
-import logoDesktop from "../../assets/Photos/logoDesktop.svg";
-import logoMobile from "../../assets/Photos/logoMobile.svg";
-import { Link, useLocation } from "react-router-dom";
+import logo from "../../assets/Photos/logokolor2.png";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 //@ts-ignore
 import { HashLink } from "react-router-hash-link";
 import { CookiePolicy } from "../CookiePolicy/CookiePolicy";
@@ -38,6 +37,8 @@ export const MenuToggled = ({ closeAction }: { closeAction: () => void }) => {
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => setIsOpen(!isOpen);
+  const navigation=useNavigate()
+  const { pathname } = useLocation();
 
   const [showLogo, setShowLogo] = useState(window.innerWidth < 900);
 
@@ -46,17 +47,20 @@ export const Navigation = () => {
       setShowLogo(true);
     } else if (window.scrollY > 350) {
       setShowLogo(true);
+    }else if (pathname === "/") {
+      setShowLogo(false);
     }
   };
   useEffect(() => {
     window.addEventListener("scroll", handleLogoChange, { passive: true });
 
+    if(pathname!=="/"){
+      setShowLogo(true);
+    }
     return () => {
       window.removeEventListener("scroll", handleLogoChange);
     };
   }, []);
-
-  const { pathname } = useLocation();
 
   const scrollWithOffset = (el: any, offset: number) => {
     const elementPosition = el.offsetTop - offset;
@@ -67,6 +71,18 @@ export const Navigation = () => {
     });
   };
 
+  const handleLogoClick=()=>{
+    if(pathname==="/"){
+       window.scroll({
+         top: 0,
+         left: 0,
+         behavior: "smooth",
+       });
+    }else{
+      navigation("/");
+    }
+  }
+
   return (
     <>
       <ScrollToTop />
@@ -74,12 +90,9 @@ export const Navigation = () => {
       <nav className={styles.navbar}>
         <div className={styles.navbar__logo}>
           {showLogo ? (
-            <Link to="/">
-              <picture>
-                <source srcSet={logoDesktop} media="(min-width: 900px)" />
-                <img src={logoMobile} alt="logo mobile" />
-              </picture>
-            </Link>
+            <picture onClick={handleLogoClick}>
+              <img src={logo} alt="logo mobile" />
+            </picture>
           ) : null}
         </div>
         <div className={styles.navbar__handle} onClick={handleClick}>
